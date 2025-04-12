@@ -1,0 +1,75 @@
+
+.field-set {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+}
+
+.field-set span {
+  text-shadow: none;
+  filter: brightness(0.5);
+  transition: all 0.7s ease-out;
+}
+
+.field-set span:hover {
+  text-shadow: unset;
+  filter: brightness(1);
+}
+
+.neon-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--neon-blue);
+  box-shadow: none;
+  filter: brightness(0.5);
+  border-radius: 0.3rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.7s ease-out;
+  margin: 0 0.3rem;
+}
+
+.neon-checkbox::after {
+  position: absolute;
+  color: var(--neon-orange);
+  font-size: 1.5rem;
+  top: -0.45rem;
+  left: 0.45rem;
+  content: "」";
+  font-weight: 600;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  user-select: none;
+}
+
+.neon-checkbox:hover {
+  box-shadow: 0 0 2px var(--neon-blue), 0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+  filter: brightness(1);
+}
+
+.neon-checkbox:checked {
+  position: relative;
+  border-color: var(--neon-orange);
+  box-shadow: 0 0 2px var(--neon-orange), 0 0 8px var(--neon-orange),
+    inset 0 0 2px var(--neon-orange), inset 0 0 8px var(--neon-orange);
+  filter: brightness(1);
+}
+
+.neon-checkbox:checked::after {
+  opacity: 1;
+}
+
+.neon-checkbox:checked ~ span {
+  text-shadow: unset;
+  color: var(--neon-orange);
+  filter: brightness(1);
+}

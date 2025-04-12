@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "neo-metro-city",
+  "version": "0.0.7",
+  "description": "NEO MeTRO CITY - the most geeky UI Library for Tailwind CSS",
+  "author": "Neo Metro Lab",
+  "license": "MIT",
+  "homepage": "https://neo-metro.dev",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "postcss": "^8.5.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.3"
+  }
+}

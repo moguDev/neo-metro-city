@@ -1,0 +1,22 @@
+:root {
+  --cyber-black: #0a0a12;
+  --cyber-dark: #0e0e20;
+
+  --neon-orange: #eb9f5d;
+  --neon-pink: #ff2d95;
+  --neon-blue: #D2ECFA;
+  --neon-purple: #a742f5;
+  --neon-green: #36f1cd;
+  --neon-yellow: #ffde03;
+}
+
+html,
+body {
+  background-color: var(--cyber-black);
+  color: var(--neon-blue);
+}
+
+* {
+  color: var(--neon-blue);
+  text-shadow: .2em .2em .5em var(--cyber-black), 0 0 .1em currentColor, 0 0 .5em currentColor;
+}

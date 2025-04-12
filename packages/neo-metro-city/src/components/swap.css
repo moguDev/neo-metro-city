@@ -1,0 +1,56 @@
+.swap {
+  place-content: center;
+  display: inline-grid;
+  position: relative;
+  text-align: center;
+  padding: 0.1rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.swap > * {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.swap input {
+  appearance: none;
+  border: none;
+  display: none;
+}
+
+.swap input:not(:checked) {
+  box-shadow: none;
+}
+
+.swap-on,
+.swap-off {
+  opacity: 0;
+  transition: opacity 0.2s ease, filter .5s ease-in-out;
+  font-weight: bold;
+  filter: brightness(0.5);
+}
+
+.swap input:checked + .swap-on {
+  opacity: 1;
+  color: var(--neon-orange);
+  text-shadow: 0 0 .1em currentColor, 0 0 .5em currentColor;
+  filter: brightness(1);
+}
+
+.swap input:checked + .swap-on + .swap-off {
+  filter: brightness(0.5);
+  opacity: 0;
+}
+
+.swap input:not(:checked) + .swap-on {
+  filter: brightness(0.5);
+  opacity: 0;
+}
+
+.swap input:not(:checked) + .swap-on + .swap-off {
+  opacity: 1;
+  filter: brightness(0.5);
+  text-shadow: none;
+}
