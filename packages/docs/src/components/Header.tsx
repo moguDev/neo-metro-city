@@ -25,6 +25,7 @@ const Header = () => {
           <li>
             <a
               href="https://github.com/moguDev/neo-metro-city"
+              target="_blank"
               className="cursor-pointer shadow-xl shadow-white"
             >
               <svg
