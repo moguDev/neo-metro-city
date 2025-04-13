@@ -31,10 +31,10 @@ const ContributorsSection = () => {
   }, []);
 
   return (
-    <section className="my-8">
+    <section className="my-8" id="contributors">
       <div className="bg-cyber-black sticky top-0 left-0 right-0 flex items-center justify-between neon-border-b-orange py-4">
         <p className="text-xl uppercase font-bold italic tracking-wider">
-          <HashAnchor id="contributors" />
+          <HashAnchor id="#contributors" />
           Contributors
         </p>
       </div>

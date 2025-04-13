@@ -20,9 +20,12 @@ const Hero = () => {
         />
       </div>
       <div className="flex md:flex-row flex-col items-center mx-auto gap-8">
-        <button className="btn md:w-52 w-80 font-bold uppercase tracking-widest border-neon-blue hover:text-neon-orange hover:border-neon-orange">
+        <a
+          href="#how-to-install"
+          className="btn md:w-52 w-80 font-bold uppercase tracking-widest border-neon-blue hover:text-neon-orange hover:border-neon-orange"
+        >
           Get Started
-        </button>
+        </a>
         <p className="bg-cyber-dark px-4 py-2 tracking-widest rounded-lg select-text font-mono text-neon-none md:text-base text-sm">
           <span className="select-none mr-4 text-neon-yellow text-shadow-none">
             {">_"}
