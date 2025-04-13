@@ -101,7 +101,7 @@ const ComponentsSection = () => {
     {
       label: "ACCORDION",
       component: (
-        <div className="join w-fit scale-50 bg-cyber-black px-4 rounded">
+        <div className="join scale-50 bg-cyber-black px-4 rounded">
           <div className="neon-accordion text-neon-blue neon-border-b">
             <input type="radio" name="neon-accordion" />
             <div className="neon-accordion-title text-neon-blue font-bold">
@@ -195,11 +195,12 @@ const ComponentsSection = () => {
         </>
       ),
     },
+    //
   ];
 
   return (
     <section>
-      <div className="py-4 neon-border-b-orange">
+      <div className="bg-cyber-black sticky top-0 left-0 right-0 py-4 neon-border-b-orange">
         <h2 className="text-xl font-bold italic uppercase tracking-wider">
           <HashAnchor id="components" />
           <span className="mr-1 text-2xl text-neon-yellow neon-glow-soft">
