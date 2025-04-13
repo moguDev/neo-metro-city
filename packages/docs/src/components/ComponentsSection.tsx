@@ -130,6 +130,23 @@ const ComponentsSection = () => {
         </ul>
       ),
     },
+    // Tabs
+    {
+      label: "Tabs",
+      component: (
+        <div role="tab" className="tabs">
+          <a role="tab" className="tab">
+            Tab 1
+          </a>
+          <a role="tab" className="tab tab-active">
+            Tab 2
+          </a>
+          <a role="tab" className="tab">
+            Tab 3
+          </a>
+        </div>
+      ),
+    },
     // Checkbox
     {
       label: "CHECKBOX",
@@ -177,7 +194,11 @@ const ComponentsSection = () => {
           >
             SHOW ALERT
           </button>
-          <div role="alert" className="alert scale-0 w-[95%]" id="neon-alert">
+          <div
+            role="alert"
+            className="alert scale-0 max-w-4xl w-[95%]"
+            id="neon-alert"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
