@@ -238,10 +238,10 @@ const ComponentsSection = () => {
   ];
 
   return (
-    <section>
-      <div className="bg-cyber-black sticky top-0 left-0 right-0 py-4 neon-border-b-orange z-50">
+    <section id="components">
+      <div className="bg-cyber-black sticky top-0 left-0 right-0 py-4 neon-border-b-orange z-40">
         <h2 className="text-xl font-bold italic uppercase tracking-wider">
-          <HashAnchor id="components" />
+          <HashAnchor id="#components" />
           <span className="mr-1 text-2xl text-neon-yellow neon-glow-soft">
             {components.length}
           </span>

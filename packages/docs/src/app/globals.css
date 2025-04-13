@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin 'neo-metro-city';
 
+html {
+  scroll-behavior: smooth;
+}
+
 .font-quicksand {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
