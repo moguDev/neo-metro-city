@@ -72,7 +72,7 @@ const ComponentsSection = () => {
         </>
       ),
     },
-    // チェックボックス
+    // Checkbox
     {
       label: "CHECKBOX",
       component: (
@@ -82,7 +82,7 @@ const ComponentsSection = () => {
         </label>
       ),
     },
-    // ラジオボタン
+    // Radio
     {
       label: "RADIO",
       component: (
@@ -97,7 +97,7 @@ const ComponentsSection = () => {
         </div>
       ),
     },
-    // アコーディオン
+    // Accordion
     {
       label: "ACCORDION",
       component: (
@@ -140,6 +140,59 @@ const ComponentsSection = () => {
       label: "Input field",
       component: (
         <input type="text" placeholder="Type here" className="input" />
+      ),
+    },
+    // Alert
+    {
+      label: "Alert",
+      component: (
+        <>
+          <button
+            className="btn"
+            onClick={() => {
+              document
+                .querySelector("#neon-alert")
+                ?.classList.remove("scale-0");
+            }}
+          >
+            SHOW ALERT
+          </button>
+          <div role="alert" className="alert scale-0 w-[95%]" id="neon-alert">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6 overflow-visible"
+            >
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke="#D2ECFA"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+                filter="url(#glow)"
+              />
+            </svg>
+            <span className="italic">THE FUTURE JUST ARRIVED!!</span>
+            <button
+              className="btn text-neon-orange"
+              onClick={() => {
+                document.querySelector("#neon-alert")?.classList.add("scale-0");
+              }}
+            >
+              OK
+            </button>
+          </div>
+        </>
       ),
     },
   ];
