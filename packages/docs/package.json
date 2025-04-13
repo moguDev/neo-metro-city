@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.6.5",
     "neo-metro-city": "link:../neo-metro-city",
     "next": "15.2.4",
     "react": "^19.1.0",
