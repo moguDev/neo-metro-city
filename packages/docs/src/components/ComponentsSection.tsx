@@ -19,6 +19,7 @@ const ComponentsSection = () => {
         </label>
       ),
     },
+    // ドロップダウン
     {
       label: "DROPDOWN",
       component: (
@@ -38,6 +39,7 @@ const ComponentsSection = () => {
         </div>
       ),
     },
+    // モーダル
     {
       label: "MODAL",
       component: (
@@ -70,6 +72,7 @@ const ComponentsSection = () => {
         </>
       ),
     },
+    // チェックボックス
     {
       label: "CHECKBOX",
       component: (
@@ -79,6 +82,7 @@ const ComponentsSection = () => {
         </label>
       ),
     },
+    // ラジオボタン
     {
       label: "RADIO",
       component: (
@@ -93,6 +97,7 @@ const ComponentsSection = () => {
         </div>
       ),
     },
+    // アコーディオン
     {
       label: "ACCORDION",
       component: (
@@ -130,7 +135,15 @@ const ComponentsSection = () => {
         </div>
       ),
     },
+    // Input field
+    {
+      label: "Input field",
+      component: (
+        <input type="text" placeholder="Type here" className="input" />
+      ),
+    },
   ];
+
   return (
     <section>
       <div className="py-4 neon-border-b-orange">
