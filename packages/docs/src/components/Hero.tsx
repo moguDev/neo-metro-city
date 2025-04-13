@@ -4,8 +4,8 @@ const Hero = () => {
       <h1 className="md:text-8xl text-4xl font-semibold italic py-2 tracking-wider neon-glow-soft">
         NEO M<span className="blink text-neon-orange">e</span>TRO CITY
       </h1>
-      <p className="md:text-xl text-[10px] font-medium text-neon-green my-4 tracking-widest neon-border-t neon-border-b md:w-xl w-80 text-center md:p-4 p-3">
-        the most geeky UI Library for{" "}
+      <p className="md:text-xl text-[10px] font-medium text-neon-green my-4 tracking-widest neon-border-t neon-border-b md:w-2xl w-80 text-center md:p-4 p-3">
+        The most geeky UI Components & Effects Library for{" "}
         <span className="text-neon-orange tracking-widest font-semibold">
           Tailwind CSS.
         </span>
