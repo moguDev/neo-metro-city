@@ -25,7 +25,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-quicksand w-full min-h-screen overflow-x-hidden">
+      <body className="font-quicksand w-full min-h-screen overflow-x-hidden relative">
         {/* <script src="/node_modules/matsushita-ui/functions/applyEffects.js" /> */}
         <Header />
         {children}
