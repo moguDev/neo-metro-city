@@ -1,9 +1,7 @@
-// components/BackgroundShowcase.tsx
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
-// 上記で定義されたコンポーネントたち（省略せず再利用）
 const COMPONENTS = [
   // ボタン
   {
@@ -234,7 +232,7 @@ const COMPONENTS = [
 
 type FloatingComponent = {
   id: string;
-  component: JSX.Element;
+  component: ReactNode;
   top: number;
   left: number;
 };
