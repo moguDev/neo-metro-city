@@ -114,20 +114,20 @@ const ComponentsSection = () => {
     {
       label: "LIST",
       component: (
-        <div className="list border-neon-blue scale-75 bg-cyber-black">
+        <ul className="list border-neon-blue scale-75 bg-cyber-black">
           <div className="list-title border-neon-blue rounded-full">
             <span className="font-bold">LIST TITLE</span>
           </div>
-          <div className="list-row">
+          <li className="list-row">
             <span className="italic">LIST ITEM 01</span>
-          </div>
-          <div className="list-row">
+          </li>
+          <li className="list-row">
             <span className="italic">LIST ITEM 02</span>
-          </div>
-          <div className="list-row">
+          </li>
+          <li className="list-row">
             <span className="italic">LIST ITEM 03</span>
-          </div>
-        </div>
+          </li>
+        </ul>
       ),
     },
     // Checkbox
@@ -203,14 +203,33 @@ const ComponentsSection = () => {
               />
             </svg>
             <span className="italic">THE FUTURE JUST ARRIVED!!</span>
-            <button
-              className="btn text-neon-orange"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={3}
+              stroke="currentColor"
+              className="size-4"
               onClick={() => {
                 document.querySelector("#neon-alert")?.classList.add("scale-0");
               }}
             >
-              OK
-            </button>
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+                filter="url(#glow)"
+              />
+            </svg>
           </div>
         </>
       ),
