@@ -72,31 +72,6 @@ const ComponentsSection = () => {
         </>
       ),
     },
-    // Checkbox
-    {
-      label: "CHECKBOX",
-      component: (
-        <label className="field-set font-bold">
-          <input type="checkbox" className="neon-checkbox" defaultChecked />
-          <span>CHECKBOX</span>
-        </label>
-      ),
-    },
-    // Radio
-    {
-      label: "RADIO",
-      component: (
-        <div className="flex items-center gap-2 p-1">
-          <input
-            type="radio"
-            name="neon-radio"
-            className="neon-radio"
-            defaultChecked
-          />
-          <input type="radio" name="neon-radio" className="neon-radio" />
-        </div>
-      ),
-    },
     // Accordion
     {
       label: "ACCORDION",
@@ -132,6 +107,51 @@ const ComponentsSection = () => {
               registration process.
             </div>
           </div>
+        </div>
+      ),
+    },
+    // List
+    {
+      label: "LIST",
+      component: (
+        <div className="list border-neon-blue scale-75 bg-cyber-black">
+          <div className="list-title border-neon-blue rounded-full">
+            <span className="font-bold">LIST TITLE</span>
+          </div>
+          <div className="list-row">
+            <span className="italic">LIST ITEM 01</span>
+          </div>
+          <div className="list-row">
+            <span className="italic">LIST ITEM 02</span>
+          </div>
+          <div className="list-row">
+            <span className="italic">LIST ITEM 03</span>
+          </div>
+        </div>
+      ),
+    },
+    // Checkbox
+    {
+      label: "CHECKBOX",
+      component: (
+        <label className="field-set font-bold">
+          <input type="checkbox" className="neon-checkbox" defaultChecked />
+          <span>CHECKBOX</span>
+        </label>
+      ),
+    },
+    // Radio
+    {
+      label: "RADIO",
+      component: (
+        <div className="flex items-center gap-2 p-1">
+          <input
+            type="radio"
+            name="neon-radio"
+            className="neon-radio"
+            defaultChecked
+          />
+          <input type="radio" name="neon-radio" className="neon-radio" />
         </div>
       ),
     },
@@ -200,7 +220,7 @@ const ComponentsSection = () => {
 
   return (
     <section>
-      <div className="bg-cyber-black sticky top-0 left-0 right-0 py-4 neon-border-b-orange">
+      <div className="bg-cyber-black sticky top-0 left-0 right-0 py-4 neon-border-b-orange z-50">
         <h2 className="text-xl font-bold italic uppercase tracking-wider">
           <HashAnchor id="components" />
           <span className="mr-1 text-2xl text-neon-yellow neon-glow-soft">

@@ -1,0 +1,40 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.list:has(.list-title) {
+  padding-top: 1.25rem;
+  position: relative;
+}
+.list-title {
+  position: absolute;
+  top: -1.25em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--cyber-black);
+  padding-block: 0.25rem;
+  padding-inline: 1.5rem;
+  border-radius: .5rem;
+}
+.list > .list-row {
+  position: relative;
+  padding: 1rem;
+}
+.list > .list-row:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  color: var(--neon-orange);
+  left: 0;
+  right: 0;
+  border: 1px solid currentColor;
+  bottom: -2px;
+  height: 0px;
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 2px currentColor, 0 0 4px currentColor, 0 0 6px currentColor,
+    0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor, inset 0 0 8px currentColor;
+}
