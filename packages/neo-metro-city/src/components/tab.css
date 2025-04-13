@@ -1,0 +1,32 @@
+.tabs {
+  display: flex;
+  align-items: center;
+}
+.tab {
+  cursor: pointer;
+  text-align: center;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  text-shadow: none;
+  filter: brightness(0.5);
+  transition: text-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+.tab-active {
+  text-shadow: unset;
+  filter: brightness(1);
+}
+.tab-active::after {
+  content: "";
+  position: absolute;
+  color: var(--neon-orange);
+  left: 0;
+  right: 0;
+  border: 1px solid currentColor;
+  bottom: -2px;
+  height: 0px;
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 2px currentColor, 0 0 4px currentColor, 0 0 6px currentColor,
+    0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor, inset 0 0 8px currentColor;
+}

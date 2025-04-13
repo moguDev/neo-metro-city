@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackgroundShowcase from "@/components/BackgroundShowcase";
 
 export const metadata: Metadata = {
   title:
@@ -26,9 +27,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-quicksand w-full min-h-screen overflow-x-hidden relative">
-        {/* <script src="/node_modules/matsushita-ui/functions/applyEffects.js" /> */}
+        <BackgroundShowcase />
         <Header />
-        {children}
+        <div className="relative z-10">{children}</div>
         <Footer />
       </body>
     </html>
