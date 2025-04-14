@@ -7,7 +7,7 @@ const Header = () => {
     { href: "#", text: "Effects" },
   ];
   return (
-    <header className="absolute top-0 left-0 right-0 mx-2 h-16 neon-border-b-orange select-none z-50">
+    <header className="absolute top-0 left-0 right-0 mx-2 h-16 neon-border-b-orange select-none z-40">
       <div className="flex items-center justify-between h-full p-2">
         <Link href="/" className="flex items-center">
           <p className="text-xl font-semibold tracking-wide neon-glow-soft">

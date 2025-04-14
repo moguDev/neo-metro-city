@@ -23,41 +23,33 @@ const COMPONENTS = [
   {
     label: "DROPDOWN",
     component: (
-      <div className="dropdown">
-        <input type="checkbox" id="dropdown-toggle" />
-        <label htmlFor="dropdown-toggle" className="font-bold">
-          DROPDOWN
-        </label>
-        <ul className="dropdown-content border-neon-blue w-52">
-          <li>
-            <a href="#">Item 1</a>
-          </li>
-          <li>
-            <a href="#">Item 2</a>
-          </li>
-        </ul>
-      </div>
+      <ul className="p-4 rounded border-neon-blue w-52">
+        <li>
+          <a href="#">Item 1</a>
+        </li>
+        <li>
+          <a href="#">Item 2</a>
+        </li>
+      </ul>
     ),
   },
   // モーダル
   {
     label: "MODAL",
     component: (
-      <dialog className="modal">
-        <div className="modal-box text-neon-blue border-neon-blue">
-          <h3 className="modal-head text-xl font-bold" data-neon-blink-text>
-            This is Modal
-          </h3>
-          <p className="py-4">
-            Press ESC key or click the button below to close.
-          </p>
-          <div className="modal-action">
-            <form method="dialog">
-              <button className="btn">Close</button>
-            </form>
-          </div>
+      <div className="modal-box text-neon-blue border-neon-blue">
+        <h3 className="modal-head text-xl font-bold" data-neon-blink-text>
+          This is Modal
+        </h3>
+        <p className="py-4">
+          Press ESC key or click the button below to close.
+        </p>
+        <div className="modal-action">
+          <form method="dialog">
+            <button className="btn">Close</button>
+          </form>
         </div>
-      </dialog>
+      </div>
     ),
   },
   // Accordion
@@ -152,11 +144,11 @@ const COMPONENTS = [
       <div className="flex items-center gap-2 p-1">
         <input
           type="radio"
-          name="neon-radio"
+          name="neon-radio-showcase"
           className="neon-radio"
           defaultChecked
         />
-        <input type="radio" name="neon-radio" className="neon-radio" />
+        <input type="radio" name="neon-radio-showcase" className="neon-radio" />
       </div>
     ),
   },
@@ -260,8 +252,8 @@ export default function BackgroundShowcase() {
         setFloatingComponents((prev) =>
           prev.filter((c) => c.id !== newFloatingComponent.id)
         );
-      }, 2000);
-    }, 150);
+      }, 5000);
+    }, 200);
 
     return () => clearInterval(interval);
   }, []);
