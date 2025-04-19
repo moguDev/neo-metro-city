@@ -1,0 +1,64 @@
+/* @author geekMatsu */
+.toggle {
+    font-size: 17px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 3em;
+    height: 1.8em;
+    appearance: none;
+    color: var(--neon-blue);
+    border: 2px solid currentColor;
+    transition: filter 0.1s ease-in-out;
+    border-radius: 0.5rem;
+    filter: brightness(.6);
+  }
+  
+  .toggle:checked {
+    color: var(--neon-blue);
+    border: 2px solid currentColor;
+    box-shadow: 
+    0 0 2px currentColor, 
+    0 0 4px currentColor, 
+    inset 0 0 2px currentColor, 
+    inset 0 0 4px currentColor;
+    filter: brightness(1);
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+
+  .toggle:hover {
+    color: var(--neon-blue);
+    filter: brightness(.8);
+  }
+  
+  .toggle:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 0;
+    border-radius: 20px;
+    left: 0.5em;
+    bottom: 0.28em;
+    transition: transform 0.3s ease-in-out;
+    color: var(--neon-orange);
+    border: 1.5px solid currentColor;
+  }
+  
+  .toggle:checked::before {
+    transform: translateX(1.5em);
+    color: var(--neon-orange);
+    box-shadow: 
+    0 0 2px currentColor, 
+    0 0 4px currentColor;
+    filter: brightness(1);
+  }
+
+  .toggle:checked:hover {
+    color: var(--neon-bule);
+    box-shadow: 
+    0 0 2px currentColor, 
+    0 0 4px currentColor,  
+    inset 0 0 2px currentColor, 
+    inset 0 0 4px currentColor;
+    filter: brightness(1.1)
+  }
