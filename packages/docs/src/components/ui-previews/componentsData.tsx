@@ -254,5 +254,26 @@ export const componentsData: UIComponent[] = [
       </>
     ),
   },
-  //
+  // Side-drawer
+  {
+    label: "SIDE DRAWER",
+    component: (
+      <>
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <label htmlFor="my-drawer" className="btn uppercase">
+          Open drawer
+        </label>
+        <div className="drawer-left">
+          <label htmlFor="my-drawer" className="drawer-overlay" />
+          <div className="menu min-h-full w-80 bg-cyber-black neon-border-r-orange p-4">
+            <ul className="uppercase">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+        </div>
+      </>
+    ),
+  },
 ];
