@@ -254,5 +254,11 @@ export const componentsData: UIComponent[] = [
       </>
     ),
   },
-  //
+  // Toggle
+  {
+    label: "TOGGLE",
+    component: (
+      <input type="checkbox" className="toggle "/>
+    ),
+  },
 ];
