@@ -1,0 +1,36 @@
+.drawer-toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  appearance: none;
+  opacity: 0;
+}
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  opacity: 0.6;
+  backdrop-filter: blur(0.2rem);
+  background-color: var(--cyber-black);
+}
+
+.drawer-left {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: -10rem;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.drawer-toggle:checked ~ .drawer-left {
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+}
