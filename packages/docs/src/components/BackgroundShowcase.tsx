@@ -252,7 +252,7 @@ export default function BackgroundShowcase() {
           prev.filter((c) => c.id !== newFloatingComponent.id)
         );
       }, 5000);
-    }, 100);
+    }, 200);
 
     return () => clearInterval(interval);
   }, []);
