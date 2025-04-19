@@ -220,6 +220,10 @@ const COMPONENTS = [
       </div>
     ),
   },
+  {
+    label: "TOGGLE",
+    component: <input type="checkbox" className="toggle" checked />,
+  },
 ];
 
 type FloatingComponent = {
