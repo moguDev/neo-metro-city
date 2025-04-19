@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex items-center gap-6 my-4">
             <div className="flex flex-col items-center gap-3 w-20">
               <Image
-                src="/images/mogu.png"
+                src="https://avatars.githubusercontent.com/u/12319280?v=4"
                 alt="mogu"
                 className="rounded-[20px]"
                 width={60}
@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col items-center gap-3 w-20">
               <Image
-                src="/images/pote.jpg"
+                src="https://avatars.githubusercontent.com/u/168655536?v=4"
                 alt="potatoman"
                 className="rounded-[20px]"
                 width={60}
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col items-center gap-3 w-20">
               <Image
-                src="/images/matsu.png"
+                src="https://avatars.githubusercontent.com/u/168791433?v=4"
                 alt="matsu"
                 className="rounded-[20px]"
                 width={60}
