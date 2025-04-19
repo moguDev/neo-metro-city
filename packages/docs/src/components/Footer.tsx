@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full overflow-hidden h-56 mt-32 p-6 select-none bg-cyber-dark z-40">
+    <footer className="w-full overflow-hidden h-56 mt-32 p-6 select-none bg-cyber-dark">
       <div className="flex md:flex-row flex-col items-center justify-between gap-4 h-full">
         <div className="my-auto">
           <p className="text-sm font-bold">Neo MeTRO Labs.</p>
