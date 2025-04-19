@@ -243,9 +243,8 @@ export default function BackgroundShowcase() {
         id: crypto.randomUUID(),
         component: newComponent.component,
         top: Math.random() * 90,
-        left: Math.random() * 90,
+        left: Math.random() * 120 - 60,
       };
-
       setFloatingComponents((prev) => [...prev, newFloatingComponent]);
 
       setTimeout(() => {
@@ -253,7 +252,7 @@ export default function BackgroundShowcase() {
           prev.filter((c) => c.id !== newFloatingComponent.id)
         );
       }, 5000);
-    }, 200);
+    }, 100);
 
     return () => clearInterval(interval);
   }, []);

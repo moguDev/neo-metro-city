@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <section className="w-full min-h-dvh mx-auto flex flex-col items-center justify-center select-none">
-      <h1 className="lg:text-8xl md:text-7xl sm:text-5xl text-4xl font-semibold py-2 tracking-wide neon-glow-soft brightness-200">
+      <h1 className="lg:text-8xl md:text-7xl sm:text-5xl text-4xl font-medium py-2 tracking-wide neon-glow-soft brightness-200">
         NEO M<span className="blink text-neon-orange">e</span>TRO CITY
       </h1>
       <p className="md:text-xl text-[10px] font-medium text-neon-green my-4 tracking-widest neon-border-t neon-border-b md:w-2xl w-80 text-center md:p-4 p-3">
