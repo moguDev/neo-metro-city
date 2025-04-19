@@ -93,7 +93,11 @@
 }
 
 /* Neon-Border-* */
-.neon-border-t, .neon-border-b, .neon-border-b-orange {
+.neon-border-t, 
+.neon-border-b, 
+.neon-border-r,
+.neon-border-r-orange,
+.neon-border-b-orange {
   position: relative;
 }
 
@@ -120,6 +124,50 @@
     inset 0 0 8px currentColor;
 }
 
+/* Right-Border Neon */
+.neon-border-r::after {
+  content: "";
+  position: absolute;
+  color: var(--neon-blue);
+  top: 0;
+  bottom: 0;
+  right: -2px;
+  width: 0px;
+  pointer-events: none;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  box-shadow: 
+    0 0 2px currentColor, 
+    0 0 4px currentColor, 
+    0 0 6px currentColor, 
+    0 0 8px currentColor, 
+    inset 0 0 2px currentColor, 
+    inset 0 0 4px currentColor, 
+    inset 0 0 6px currentColor, 
+    inset 0 0 8px currentColor;
+}
+
+.neon-border-r-orange::after {
+  content: "";
+  position: absolute;
+  color: var(--neon-orange);
+  top: 0;
+  bottom: 0;
+  right: -2px;
+  width: 0px;
+  pointer-events: none;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  box-shadow: 
+    0 0 2px currentColor, 
+    0 0 4px currentColor, 
+    0 0 6px currentColor, 
+    0 0 8px currentColor, 
+    inset 0 0 2px currentColor, 
+    inset 0 0 4px currentColor, 
+    inset 0 0 6px currentColor, 
+    inset 0 0 8px currentColor;
+}
 /* Bottom-Border Neon */
 .neon-border-b::after {
   content: "";
