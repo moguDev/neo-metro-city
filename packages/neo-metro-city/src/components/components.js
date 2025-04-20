@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const cssToJson = require("../../functions/cssToJson"); // 👈 ココ！
+const cssToJson = require("../../functions/cssToJson");
 
 const componentsDir = __dirname;
 const components = fs
