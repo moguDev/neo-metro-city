@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import BackgroundShowcase from "@/components/BackgroundShowcase";
+import SideMenu from "@/components/SideMenu";
 
 export const metadata: Metadata = {
   title:
@@ -29,6 +30,7 @@ export default function RootLayout({
         <BackgroundShowcase />
         <Header />
         <div className="relative">{children}</div>
+        <SideMenu />
       </body>
     </html>
   );

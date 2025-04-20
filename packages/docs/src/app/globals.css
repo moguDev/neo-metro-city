@@ -18,7 +18,9 @@ html {
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1.5px var(--neon-blue);
-  text-shadow: 0 0 2em var(--neon-blue), 0 0 1em var(--neon-blue);
+  text-shadow:
+    0 0 2em var(--neon-blue),
+    0 0 1em var(--neon-blue);
 }
 .neon-stroke span {
   position: absolute;

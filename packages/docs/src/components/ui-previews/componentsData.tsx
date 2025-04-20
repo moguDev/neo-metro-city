@@ -270,12 +270,13 @@ export const componentsData: UIComponent[] = [
         </label>
         <div className="drawer-left">
           <label htmlFor="my-drawer" className="drawer-overlay" />
-          <div className="menu min-h-full w-80 bg-cyber-black neon-border-r-orange p-4">
-            <ul className="uppercase">
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-            </ul>
+          <p className="drawer-head text-neon-orange tracking-widest">
+            SIDE DRAWER
+          </p>
+          <div className="drawer-content w-80">
+            <div className="italic uppercase flex items-center justify-center h-full">
+              drawer content here
+            </div>
           </div>
         </div>
       </>

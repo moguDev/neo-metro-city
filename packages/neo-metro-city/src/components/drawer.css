@@ -13,7 +13,7 @@
   width: 100vw;
   height: 100vh;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.7;
   backdrop-filter: blur(0.2rem);
   background-color: var(--cyber-black);
 }
@@ -22,6 +22,7 @@
   position: fixed;
   z-index: 99;
   top: 0;
+  padding: 1rem;
   left: -10rem;
   height: 100vh;
   visibility: hidden;
@@ -29,8 +30,50 @@
   transition: all 0.3s ease-in-out;
 }
 
+.drawer-left:has(.drawer-head) {
+  padding-top: 2rem;
+}
+
 .drawer-toggle:checked ~ .drawer-left {
   visibility: visible;
   opacity: 1;
   left: 0;
+}
+
+.drawer-content {
+  position: relative;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: auto;
+  background: var(--cyber-dark);
+  border: 2px solid var(--neon-blue);
+  border-radius: 0.5rem;
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
+}
+
+.drawer-head ~ .drawer-content {
+  padding-top: 1.5rem;
+}
+
+.drawer-head {
+  background: var(--cyber-dark);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.25rem 2rem;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 1;
+  border: 2px solid var(--neon-blue);
+  border-radius: 1rem;
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
 }

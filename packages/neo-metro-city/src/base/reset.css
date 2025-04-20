@@ -16,6 +16,10 @@ body {
   color: var(--neon-blue);
 }
 
+html:has(.drawer-toggle:checked) {
+  overflow: hidden;
+}
+
 * {
   color: var(--neon-blue);
   text-shadow:
