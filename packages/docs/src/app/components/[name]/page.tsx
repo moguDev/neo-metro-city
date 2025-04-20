@@ -1,5 +1,3 @@
-import { param } from "framer-motion/client";
-
 type Props = {
   params: {
     name: string;
