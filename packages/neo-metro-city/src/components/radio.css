@@ -15,8 +15,11 @@
 
 .neon-radio:hover {
   filter: brightness(1);
-  box-shadow: 0 0 2px var(--neon-blue), 0 0 8px var(--neon-blue),
-    inset 0 0 2px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
 }
 
 .neon-radio::before {
@@ -29,8 +32,11 @@
   width: 12px;
   height: 12px;
   background-color: var(--neon-orange); /* ネオングリーン */
-  box-shadow: 0 0 2px var(--neon-orange), 0 0 8px var(--neon-orange),
-    inset 0 0 2px var(--neon-orange), inset 0 0 8px var(--neon-orange);
+  box-shadow:
+    0 0 2px var(--neon-orange),
+    0 0 8px var(--neon-orange),
+    inset 0 0 2px var(--neon-orange),
+    inset 0 0 8px var(--neon-orange);
   border-radius: 50%;
   transition: all 0.2s ease-out;
 }
@@ -38,8 +44,11 @@
 .neon-radio:checked {
   border-color: var(--neon-orange);
   filter: brightness(1);
-  box-shadow: 0 0 2px var(--neon-orange), 0 0 8px var(--neon-orange),
-    inset 0 0 2px var(--neon-orange), inset 0 0 8px var(--neon-orange);
+  box-shadow:
+    0 0 2px var(--neon-orange),
+    0 0 8px var(--neon-orange),
+    inset 0 0 2px var(--neon-orange),
+    inset 0 0 8px var(--neon-orange);
 }
 
 .neon-radio:checked::before {

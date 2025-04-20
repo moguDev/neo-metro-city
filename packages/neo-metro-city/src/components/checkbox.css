@@ -1,4 +1,3 @@
-
 .field-set {
   display: flex;
   align-items: center;
@@ -51,16 +50,22 @@
 }
 
 .neon-checkbox:hover {
-  box-shadow: 0 0 2px var(--neon-blue), 0 0 8px var(--neon-blue),
-    inset 0 0 2px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
   filter: brightness(1);
 }
 
 .neon-checkbox:checked {
   position: relative;
   border-color: var(--neon-orange);
-  box-shadow: 0 0 2px var(--neon-orange), 0 0 8px var(--neon-orange),
-    inset 0 0 2px var(--neon-orange), inset 0 0 8px var(--neon-orange);
+  box-shadow:
+    0 0 2px var(--neon-orange),
+    0 0 8px var(--neon-orange),
+    inset 0 0 2px var(--neon-orange),
+    inset 0 0 8px var(--neon-orange);
   filter: brightness(1);
 }
 

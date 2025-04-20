@@ -1,14 +1,18 @@
 .btn {
   filter: inherit;
   color: var(--neon-blue);
-  text-shadow: 0 0 .1em currentColor, 0 0 .5em currentColor;
+  text-shadow:
+    0 0 0.1em currentColor,
+    0 0 0.5em currentColor;
   font-weight: 600;
   text-align: center;
   padding: 8px 16px;
   cursor: pointer;
   border-radius: 0.5rem;
   user-select: none;
-  transition: filter 0.1s ease-in-out, scale .3s ease-in-out;
+  transition:
+    filter 0.1s ease-in-out,
+    scale 0.3s ease-in-out;
 }
 
 .btn:hover {
@@ -18,4 +22,3 @@
 .btn:active {
   filter: brightness(0.6);
 }
-
