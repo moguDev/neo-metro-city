@@ -9,14 +9,41 @@ const Header = () => {
   return (
     <header className="absolute top-0 left-0 right-0 mx-2 h-16 neon-border-b-orange select-none z-50">
       <div className="flex items-center justify-between h-full p-2">
-        <Link href="/" className="flex items-center">
-          <p className="text-xl font-semibold tracking-wide neon-glow-soft">
-            NEO M<span className="text-neon-orange">e</span>TRO CITY
-          </p>
-          <p className="ml-1 text-shadow-none opacity-80 text-sm font-mono bg-cyber-dark px-2 py-1 rounded-lg">
-            v1.0.0
-          </p>
-        </Link>
+        <div className="flex items-center gap-2">
+          <label htmlFor="side-drawer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-6 text-white cursor-pointer"
+            >
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                filter="url(#glow)"
+              />
+            </svg>
+          </label>
+          <Link href="/" className="flex items-center">
+            <p className="text-xl font-semibold tracking-wide neon-glow-soft">
+              NEO M<span className="text-neon-orange">e</span>TRO CITY
+            </p>
+            <p className="ml-1 text-shadow-none opacity-80 text-sm font-mono bg-cyber-dark px-2 py-1 rounded-lg">
+              v1.0.0
+            </p>
+          </Link>
+        </div>
         <ul className="hidden md:flex items-center">
           {links.map((li, i) => (
             <li key={i} className="btn font-bold tracking-wider uppercase">

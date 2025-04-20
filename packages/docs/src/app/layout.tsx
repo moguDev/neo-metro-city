@@ -29,6 +29,17 @@ export default function RootLayout({
         <BackgroundShowcase />
         <Header />
         <div className="relative">{children}</div>
+        <input id="side-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-left">
+          <label htmlFor="side-drawer" className="drawer-overlay" />
+          <div className="menu min-h-full w-80 bg-cyber-black neon-border-r-orange p-4">
+            <ul className="uppercase">
+              <li>Components</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+        </div>
       </body>
     </html>
   );

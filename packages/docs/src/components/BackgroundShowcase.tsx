@@ -206,6 +206,7 @@ const COMPONENTS = [
               <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
               <feMerge>
                 <feMergeNode in="coloredBlur" />
+
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
