@@ -16,8 +16,11 @@
   background-color: var(--cyber-dark);
   border: 2px solid var(--neon-blue);
   border-radius: 0.75rem;
-  box-shadow: 0 0 2px var(--neon-blue), 0 0 8px var(--neon-blue),
-    inset 0 0 2px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
   transition: all 0.2s ease-in-out;
 }
 

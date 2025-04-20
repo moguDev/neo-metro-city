@@ -4,7 +4,7 @@
 
   --neon-orange: #eb9f5d;
   --neon-pink: #ff2d95;
-  --neon-blue: #D2ECFA;
+  --neon-blue: #d2ecfa;
   --neon-purple: #a742f5;
   --neon-green: #36f1cd;
   --neon-yellow: #ffde03;
@@ -18,5 +18,8 @@ body {
 
 * {
   color: var(--neon-blue);
-  text-shadow: .2em .2em .5em var(--cyber-black), 0 0 .1em currentColor, 0 0 .5em currentColor;
+  text-shadow:
+    0.2em 0.2em 0.5em var(--cyber-black),
+    0 0 0.1em currentColor,
+    0 0 0.5em currentColor;
 }

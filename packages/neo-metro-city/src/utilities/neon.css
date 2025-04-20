@@ -6,8 +6,8 @@
 }
 
 /* 消灯, 点滅*/
-.turnoff{
-  filter: brightness(.5);
+.turnoff {
+  filter: brightness(0.5);
   text-shadow: none;
   box-shadow: none;
 }
@@ -33,7 +33,6 @@
   animation: neon-brightness 15s infinite;
   animation-timing-function: ease-in-out;
 }
-
 
 /* Text Neon */
 .text-neon-none {
@@ -66,35 +65,36 @@
 }
 
 .turnon {
-  text-shadow: 0 0 .1em currentColor, 0 0 .5em currentColor;
+  text-shadow:
+    0 0 0.1em currentColor,
+    0 0 0.5em currentColor;
   filter: brightness(1);
 }
-
 
 /* Box-Border Neon */
 .border-neon-blue {
   box-sizing: border-box;
   border: 2px solid var(--neon-blue);
-  box-shadow: 
-    0 0 2px var(--neon-blue), 
-    0 0 8px var(--neon-blue), 
-    inset 0 0 2px var(--neon-blue), 
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
     inset 0 0 8px var(--neon-blue);
 }
 
 .border-neon-orange {
   box-sizing: border-box;
   border: 2px solid var(--neon-orange);
-  box-shadow: 
-    0 0 2px var(--neon-orange), 
-    0 0 8px var(--neon-orange), 
-    inset 0 0 2px var(--neon-orange), 
+  box-shadow:
+    0 0 2px var(--neon-orange),
+    0 0 8px var(--neon-orange),
+    inset 0 0 2px var(--neon-orange),
     inset 0 0 8px var(--neon-orange);
 }
 
 /* Neon-Border-* */
-.neon-border-t, 
-.neon-border-b, 
+.neon-border-t,
+.neon-border-b,
 .neon-border-r,
 .neon-border-r-orange,
 .neon-border-b-orange {
@@ -113,14 +113,14 @@
   height: 0px;
   pointer-events: none;
   border-radius: 2px;
-  box-shadow: 
-    0 0 2px currentColor, 
-    0 0 4px currentColor, 
-    0 0 6px currentColor, 
-    0 0 8px currentColor, 
-    inset 0 0 2px currentColor, 
-    inset 0 0 4px currentColor, 
-    inset 0 0 6px currentColor, 
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor,
     inset 0 0 8px currentColor;
 }
 
@@ -136,14 +136,14 @@
   pointer-events: none;
   border: 1px solid currentColor;
   border-radius: 2px;
-  box-shadow: 
-    0 0 2px currentColor, 
-    0 0 4px currentColor, 
-    0 0 6px currentColor, 
-    0 0 8px currentColor, 
-    inset 0 0 2px currentColor, 
-    inset 0 0 4px currentColor, 
-    inset 0 0 6px currentColor, 
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor,
     inset 0 0 8px currentColor;
 }
 
@@ -158,14 +158,14 @@
   pointer-events: none;
   border: 1px solid currentColor;
   border-radius: 2px;
-  box-shadow: 
-    0 0 2px currentColor, 
-    0 0 4px currentColor, 
-    0 0 6px currentColor, 
-    0 0 8px currentColor, 
-    inset 0 0 2px currentColor, 
-    inset 0 0 4px currentColor, 
-    inset 0 0 6px currentColor, 
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor,
     inset 0 0 8px currentColor;
 }
 /* Bottom-Border Neon */
@@ -180,14 +180,14 @@
   height: 0px;
   pointer-events: none;
   border-radius: 2px;
-  box-shadow: 
-    0 0 2px currentColor, 
-    0 0 4px currentColor, 
-    0 0 6px currentColor, 
-    0 0 8px currentColor, 
-    inset 0 0 2px currentColor, 
-    inset 0 0 4px currentColor, 
-    inset 0 0 6px currentColor, 
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor,
     inset 0 0 8px currentColor;
 }
 
@@ -202,14 +202,14 @@
   height: 0px;
   pointer-events: none;
   border-radius: 2px;
-  box-shadow: 
-    0 0 2px currentColor, 
-    0 0 4px currentColor, 
-    0 0 6px currentColor, 
-    0 0 8px currentColor, 
-    inset 0 0 2px currentColor, 
-    inset 0 0 4px currentColor, 
-    inset 0 0 6px currentColor, 
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor,
     inset 0 0 8px currentColor;
 }
 
@@ -226,13 +226,13 @@
   width: 0px;
   pointer-events: none;
   border-radius: 2px;
-  box-shadow: 
-    0 0 2px var(--neon-blue), 
-    0 0 4px var(--neon-blue), 
-    0 0 6px var(--neon-blue), 
-    0 0 8px var(--neon-blue), 
-    inset 0 0 2px var(--neon-blue), 
-    inset 0 0 4px var(--neon-blue), 
-    inset 0 0 6px var(--neon-blue), 
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 4px var(--neon-blue),
+    0 0 6px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 4px var(--neon-blue),
+    inset 0 0 6px var(--neon-blue),
     inset 0 0 8px var(--neon-blue);
 }

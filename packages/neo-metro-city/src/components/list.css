@@ -17,7 +17,7 @@
   background-color: var(--cyber-black);
   padding-block: 0.25rem;
   padding-inline: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 .list > .list-row {
   position: relative;
@@ -34,7 +34,13 @@
   height: 0px;
   pointer-events: none;
   border-radius: 2px;
-  box-shadow: 0 0 2px currentColor, 0 0 4px currentColor, 0 0 6px currentColor,
-    0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 4px currentColor,
-    inset 0 0 6px currentColor, inset 0 0 8px currentColor;
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor,
+    inset 0 0 8px currentColor;
 }

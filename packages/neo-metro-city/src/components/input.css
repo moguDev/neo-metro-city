@@ -5,9 +5,14 @@
   padding-block: 0.25rem;
   border-radius: 0.5rem;
   background: none;
-  box-shadow: 0 0 2px var(--neon-blue), 0 0 8px var(--neon-blue),
-    inset 0 0 2px var(--neon-blue), inset 0 0 8px var(--neon-blue);
-  transition: box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
+  transition:
+    box-shadow 0.5s ease-in-out,
+    filter 0.5s ease-in-out;
 }
 
 .input:not(:focus) {
@@ -18,15 +23,21 @@
 
 .input:not(:placeholder-shown) {
   filter: brightness(1);
-  box-shadow: 0 0 2px var(--neon-blue), 0 0 8px var(--neon-blue),
-    inset 0 0 2px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
 }
 
 .input:focus {
   outline: none;
   border: 2px solid var(--neon-orange);
-  box-shadow: 0 0 2px var(--neon-orange), 0 0 8px var(--neon-orange),
-    inset 0 0 2px var(--neon-orange), inset 0 0 8px var(--neon-orange);
+  box-shadow:
+    0 0 2px var(--neon-orange),
+    0 0 8px var(--neon-orange),
+    inset 0 0 2px var(--neon-orange),
+    inset 0 0 8px var(--neon-orange);
 }
 
 .input::placeholder {

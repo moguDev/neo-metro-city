@@ -27,7 +27,9 @@
 .swap-on,
 .swap-off {
   opacity: 0;
-  transition: opacity 0.2s ease, filter .5s ease-in-out;
+  transition:
+    opacity 0.2s ease,
+    filter 0.5s ease-in-out;
   font-weight: bold;
   filter: brightness(0.5);
 }
@@ -35,7 +37,9 @@
 .swap input:checked + .swap-on {
   opacity: 1;
   color: var(--neon-orange);
-  text-shadow: 0 0 .1em currentColor, 0 0 .5em currentColor;
+  text-shadow:
+    0 0 0.1em currentColor,
+    0 0 0.5em currentColor;
   filter: brightness(1);
 }
 

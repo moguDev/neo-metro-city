@@ -55,163 +55,163 @@ const keyframes = {
     },
     "100%": {
       filter: "brightness(0.75)",
-    }
+    },
   },
   "@keyframes neon-fade": {
     "0%": {
-      "filter": "brightness(1.0)"
+      filter: "brightness(1.0)",
     },
     "2%": {
-      "filter": "brightness(0.98)"
+      filter: "brightness(0.98)",
     },
     "4%": {
-      "filter": "brightness(0.96)"
+      filter: "brightness(0.96)",
     },
     "6%": {
-      "filter": "brightness(0.94)"
+      filter: "brightness(0.94)",
     },
     "8%": {
-      "filter": "brightness(0.92)"
+      filter: "brightness(0.92)",
     },
     "10%": {
-      "filter": "brightness(0.90)"
+      filter: "brightness(0.90)",
     },
     "12%": {
-      "filter": "brightness(0.88)"
+      filter: "brightness(0.88)",
     },
     "14%": {
-      "filter": "brightness(0.86)"
+      filter: "brightness(0.86)",
     },
     "16%": {
-      "filter": "brightness(0.84)"
+      filter: "brightness(0.84)",
     },
     "18%": {
-      "filter": "brightness(0.82)"
+      filter: "brightness(0.82)",
     },
     "20%": {
-      "filter": "brightness(0.80)"
+      filter: "brightness(0.80)",
     },
     "22%": {
-      "filter": "brightness(0.78)"
+      filter: "brightness(0.78)",
     },
     "24%": {
-      "filter": "brightness(0.76)"
+      filter: "brightness(0.76)",
     },
     "26%": {
-      "filter": "brightness(0.74)"
+      filter: "brightness(0.74)",
     },
     "28%": {
-      "filter": "brightness(0.72)"
+      filter: "brightness(0.72)",
     },
     "30%": {
-      "filter": "brightness(0.70)"
+      filter: "brightness(0.70)",
     },
     "32%": {
-      "filter": "brightness(0.68)"
+      filter: "brightness(0.68)",
     },
     "34%": {
-      "filter": "brightness(0.66)"
+      filter: "brightness(0.66)",
     },
     "36%": {
-      "filter": "brightness(0.64)"
+      filter: "brightness(0.64)",
     },
     "38%": {
-      "filter": "brightness(0.62)"
+      filter: "brightness(0.62)",
     },
     "40%": {
-      "filter": "brightness(0.60)"
+      filter: "brightness(0.60)",
     },
     "42%": {
-      "filter": "brightness(0.58)"
+      filter: "brightness(0.58)",
     },
     "44%": {
-      "filter": "brightness(0.56)"
+      filter: "brightness(0.56)",
     },
     "46%": {
-      "filter": "brightness(0.54)"
+      filter: "brightness(0.54)",
     },
     "48%": {
-      "filter": "brightness(0.52)"
+      filter: "brightness(0.52)",
     },
     "50%": {
-      "filter": "brightness(0.50)"
+      filter: "brightness(0.50)",
     },
     "52%": {
-      "filter": "brightness(0.48)"
+      filter: "brightness(0.48)",
     },
     "54%": {
-      "filter": "brightness(0.46)"
+      filter: "brightness(0.46)",
     },
     "56%": {
-      "filter": "brightness(0.44)"
+      filter: "brightness(0.44)",
     },
     "58%": {
-      "filter": "brightness(0.42)"
+      filter: "brightness(0.42)",
     },
     "60%": {
-      "filter": "brightness(0.40)"
+      filter: "brightness(0.40)",
     },
     "62%": {
-      "filter": "brightness(0.38)"
+      filter: "brightness(0.38)",
     },
     "64%": {
-      "filter": "brightness(0.36)"
+      filter: "brightness(0.36)",
     },
     "66%": {
-      "filter": "brightness(0.34)"
+      filter: "brightness(0.34)",
     },
     "68%": {
-      "filter": "brightness(0.32)"
+      filter: "brightness(0.32)",
     },
     "70%": {
-      "filter": "brightness(0.30)"
+      filter: "brightness(0.30)",
     },
     "72%": {
-      "filter": "brightness(0.28)"
+      filter: "brightness(0.28)",
     },
     "74%": {
-      "filter": "brightness(0.26)"
+      filter: "brightness(0.26)",
     },
     "76%": {
-      "filter": "brightness(0.24)"
+      filter: "brightness(0.24)",
     },
     "78%": {
-      "filter": "brightness(0.22)"
+      filter: "brightness(0.22)",
     },
     "80%": {
-      "filter": "brightness(0.20)"
+      filter: "brightness(0.20)",
     },
     "82%": {
-      "filter": "brightness(0.18)"
+      filter: "brightness(0.18)",
     },
     "84%": {
-      "filter": "brightness(0.16)"
+      filter: "brightness(0.16)",
     },
     "86%": {
-      "filter": "brightness(0.14)"
+      filter: "brightness(0.14)",
     },
     "88%": {
-      "filter": "brightness(0.12)"
+      filter: "brightness(0.12)",
     },
     "90%": {
-      "filter": "brightness(0.10)"
+      filter: "brightness(0.10)",
     },
     "92%": {
-      "filter": "brightness(0.08)"
+      filter: "brightness(0.08)",
     },
     "94%": {
-      "filter": "brightness(0.06)"
+      filter: "brightness(0.06)",
     },
     "96%": {
-      "filter": "brightness(0.04)"
+      filter: "brightness(0.04)",
     },
     "98%": {
-      "filter": "brightness(0.02)"
+      filter: "brightness(0.02)",
     },
     "100%": {
-      "filter": "brightness(0.0)"
-    }
-  }
+      filter: "brightness(0.0)",
+    },
+  },
 };
 
 module.exports = keyframes;
