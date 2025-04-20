@@ -1,0 +1,11 @@
+{
+  "name": "neo-metro-city-monorepo",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write 'packages/neo-metro-city/{src,scripts}/**/*.{css,js}'",
+    "format:check": "prettier --check 'packages/neo-metro-city/{src,scripts}/**/*.{css,js}'"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
