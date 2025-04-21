@@ -1,0 +1,63 @@
+/* @author potatoman-dev */
+.progress-wrapper {
+  position: relative;
+  width: fit-content;
+  height: auto;
+}
+
+.progress-wrapper::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 3em;
+  color: var(--neon-blue);
+  border: 2px solid currentColor;
+  filter: brightness(0.5);
+}
+
+.progress {
+  display: block;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border-radius: 3em;
+  border: 2px solid transparent;
+}
+
+.progress::-webkit-progress-bar {
+  /* プログレスバーの背景/-webkit- 用 */
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border-radius: 3em;
+  border: 2px solid transparent;
+}
+
+.progress::-webkit-progress-value {
+  /* プログレスバーの進捗部分/-webkit- 用 */
+  background-color: var(--neon-orange);
+  filter: brightness(1);
+  border-radius: 3em;
+  box-shadow:
+    0 0 2px var(--neon-orange),
+    0 0 8px var(--neon-orange),
+    inset 0 0 2px var(--neon-orange),
+    inset 0 0 8px var(--neon-orange);
+}
+
+.progress::-moz-progress-bar {
+  /* プログレスバーの進捗部分/-moz- 用 */
+  background-color: var(--neon-orange);
+  filter: brightness(1);
+  border-radius: 3em;
+  box-shadow:
+    0 0 2px var(--neon-orange),
+    0 0 8px var(--neon-orange),
+    inset 0 0 2px var(--neon-orange),
+    inset 0 0 8px var(--neon-orange);
+}
