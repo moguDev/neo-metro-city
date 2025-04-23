@@ -2,7 +2,7 @@
 .progress {
   display: block;
   position: relative;
-  padding: 4px;
+  padding: 1px;
   height: 14px;
   -moz-appearance: none;
   border-radius: 3em;
