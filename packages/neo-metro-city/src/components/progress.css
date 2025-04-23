@@ -16,7 +16,6 @@
 
 .progress::-webkit-progress-bar {
   /* プログレスバーの背景/-webkit- 用 */
-  background-color: var(--neon-orange);
   display: block;
   position: relative;
   background-color: transparent;
