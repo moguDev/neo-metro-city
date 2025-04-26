@@ -286,8 +286,10 @@ export const componentsData: UIComponent[] = [
     label: "PROGRESS",
     component: (
       <>
-        <progress className="progress" max="100" value="70">70%</progress>
+        <progress className="progress progress-orange" max="100" value="70">
+          70%
+        </progress>
       </>
-    )
+    ),
   },
 ];
