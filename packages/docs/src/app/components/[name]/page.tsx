@@ -3,12 +3,13 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 type componentPageProps = {
-  params: {
+  params: Promise<{
     name: string;
-  };
+  }>;
 };
-const componentPage: React.FC<componentPageProps> = ({ params }) => {
-  const data = componentsData.find((data) => data.label === params.name);
+const componentPage: React.FC<componentPageProps> = async ({ params }) => {
+  const { name } = await params;
+  const data = componentsData.find((data) => data.label === name);
   return (
     <div className="pt-20 max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold tracking-wider">{data?.label}</h1>
