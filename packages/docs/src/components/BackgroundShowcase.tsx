@@ -223,7 +223,7 @@ const COMPONENTS = [
   },
   {
     label: "TOGGLE",
-    component: <input type="checkbox" className="toggle" checked />,
+    component: <input type="checkbox" className="toggle" defaultChecked />,
   },
 ];
 
@@ -257,7 +257,7 @@ export default function BackgroundShowcase() {
           prev.filter((c) => c.id !== newFloatingComponent.id)
         );
       }, 5000);
-    }, 200);
+    }, 500);
 
     return () => clearInterval(interval);
   }, []);
