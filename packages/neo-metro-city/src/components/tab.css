@@ -1,40 +1,56 @@
 .tabs {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
+
+/* ラジオボタン自体は非表示 */
+.tabs input[type="radio"] {
+  display: none;
+  appearance: none;
+}
+
 .tab {
+  position: relative;
   cursor: pointer;
   text-align: center;
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-  text-shadow: none;
+  padding: 0.5rem 1rem;
+  color: var(--neon-blue);
   filter: brightness(0.5);
+  text-shadow: none;
   transition:
-    text-shadow 0.5s ease-in-out,
-    filter 0.5s ease-in-out;
+    text-shadow 0.3s ease,
+    filter 0.3s ease;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  user-select: none;
 }
-.tab-active {
-  text-shadow: unset;
+
+/* ラジオがチェックされているラベルに対してスタイル適用 */
+.tabs input[type="radio"]:checked + label.tab {
   filter: brightness(1);
+  font-weight: bold;
+  text-shadow:
+    0 0 0.1em currentColor,
+    0 0 0.5em currentColor;
 }
-.tab-active::after {
+
+/* 下線のエフェクト */
+.tabs input[type="radio"]:checked + label.tab::after {
   content: "";
-  position: absolute;
   color: var(--neon-orange);
+  position: absolute;
   left: 0;
   right: 0;
-  border: 1px solid currentColor;
-  bottom: -2px;
-  height: 0px;
+  bottom: -3px;
+  height: 2px;
+  background-color: currentColor;
   pointer-events: none;
-  border-radius: 2px;
+  border-radius: 1px;
   box-shadow:
-    0 0 2px currentColor,
     0 0 4px currentColor,
     0 0 6px currentColor,
     0 0 8px currentColor,
-    inset 0 0 2px currentColor,
-    inset 0 0 4px currentColor,
-    inset 0 0 6px currentColor,
-    inset 0 0 8px currentColor;
+    0 0 10px currentColor;
 }
