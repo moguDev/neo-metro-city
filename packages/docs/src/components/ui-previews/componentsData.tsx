@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 
 type UIComponent = {
   label: string;
+  description?: string;
   component: ReactNode;
 };
 
@@ -9,11 +10,15 @@ export const componentsData: UIComponent[] = [
   // Button
   {
     label: "BUTTON",
+    description:
+      "Buttons let users perform actions in the interface. In Neo Metro City, they serve as clear and responsive elements designed for fast, ",
     component: <button className="btn border-neon-blue">BUTTON</button>,
   },
   // Swap
   {
     label: "SWAP",
+    description:
+      "Swap lets you toggle between two elements, like flipping a switch in the neon-lit streets of Neo Metro City—perfect for interactive states and quick visual changes.",
     component: (
       <label className="swap">
         <input type="checkbox" />
@@ -137,16 +142,21 @@ export const componentsData: UIComponent[] = [
   {
     label: "Tabs",
     component: (
-      <div role="tab" className="tabs">
-        <a role="tab" className="tab">
+      <div className="tabs" role="tablist">
+        <input type="radio" id="tab1" name="tabs" defaultChecked />
+        <label className="tab" role="tab" htmlFor="tab1">
           Tab 1
-        </a>
-        <a role="tab" className="tab tab-active">
+        </label>
+
+        <input type="radio" id="tab2" name="tabs" />
+        <label className="tab" role="tab" htmlFor="tab2">
           Tab 2
-        </a>
-        <a role="tab" className="tab">
+        </label>
+
+        <input type="radio" id="tab3" name="tabs" />
+        <label className="tab" role="tab" htmlFor="tab3">
           Tab 3
-        </a>
+        </label>
       </div>
     ),
   },
