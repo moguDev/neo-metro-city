@@ -1,6 +1,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  animation: neon-glow-soft 15s infinite alternate;
 }
 
 .dropdown input {
@@ -10,31 +11,51 @@
 .dropdown-content {
   position: absolute;
   top: 100%;
-  left: 0.25rem;
   z-index: 999;
   border-radius: 0.5rem;
   background: var(--cyber-dark);
   opacity: 0;
   transition:
-    opacity 0.7s ease,
+    opacity 0.3s ease,
     transform 0.3s ease;
   filter: brightness(0.5);
   pointer-events: none;
+  left: 0.25rem;
+  right: auto;
+  transform-origin: top left;
+}
+
+.dropdown-start {
+  left: 0.25rem;
+  right: auto;
+  transform-origin: top left;
+}
+
+.dropdown-center {
+  left: 50%;
+  right: auto;
+  transform-origin: top center;
+}
+
+.dropdown-end {
+  right: 0.25rem;
+  left: auto;
+  transform-origin: top right;
 }
 
 .dropdown label {
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: var(--cyber-dark);
   border-radius: 0.5rem;
 }
 
-.dropdown input:checked + .dropdown-content,
-.dropdown:hover .dropdown-content {
+.dropdown input:checked + label + .dropdown-content {
   opacity: 1;
   filter: brightness(1);
   pointer-events: auto;
+  animation: neon-flicker 1s ease-in forwards;
+  animation-fill-mode: none;
 }
 
 .dropdown-content li {
