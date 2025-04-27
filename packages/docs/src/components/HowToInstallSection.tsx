@@ -3,7 +3,7 @@ import HashAnchor from "./HashAnchor";
 const HowToInstallSection = () => {
   return (
     <section className="py-4 md:text-base text-sm" id="how-to-install">
-      <div className="bg-cyber-black sticky top-0 left-0 right-0 neon-border-b-orange py-4 z-40">
+      <div className="sticky top-0 left-0 right-0 neon-border-b-orange py-4 z-40">
         <h2 className="text-xl font-bold inline italic tracking-wider">
           <HashAnchor id="#how-to-install" />
           HOW TO INSTALL
