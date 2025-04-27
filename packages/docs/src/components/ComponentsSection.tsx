@@ -16,12 +16,18 @@ const ComponentsSection = () => {
       </div>
       <div className="my-4 grid md:grid-cols-3 grid-cols-1">
         {topPreviewData.map((c, i) => (
-          <div key={i} className="p-1">
+          <div
+            key={i}
+            className="p-1 cursor-pointer hover:brightness-110"
+            onClick={() => {
+              window.location.href = `/components/${c.label}`;
+            }}
+          >
             <div className="bg-cyber-dark rounded-lg">
               <div className="h-52 flex items-center justify-center">
                 {c.component}
               </div>
-              <p className="font-semibold text-sm p-2">{c.label}</p>
+              <p className="font-semibold text-sm p-2 uppercase">{c.label}</p>
             </div>
           </div>
         ))}
