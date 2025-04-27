@@ -27,6 +27,15 @@
   animation: neon-fade 3s infinite ease-in-out alternate;
 }
 
+.effect-neon-flicker {
+  animation: neon-flicker 1s ease-in forwards;
+  animation-fill-mode: none;
+}
+
+.animate-neon-flicker {
+  animation: neon-flicker 3s infinite;
+}
+
 .neon-letter {
   display: inline-block;
   color: inherit;
