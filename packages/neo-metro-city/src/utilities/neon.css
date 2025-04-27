@@ -35,8 +35,10 @@
 }
 
 /* Text Neon */
-.text-neon-none {
-  text-shadow: none;
+.text-neon-none,
+.text-neon-none > *,
+.text-neon-none > * * {
+  text-shadow: none !important;
 }
 
 .text-neon-blue {
