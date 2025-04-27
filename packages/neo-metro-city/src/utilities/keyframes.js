@@ -212,6 +212,116 @@ const keyframes = {
       filter: "brightness(0.0)",
     },
   },
+  "@keyframes neon-flicker": {
+    "0%": {
+      opacity: "0",
+      boxShadow: "none",
+      filter: "brightness(0.3)",
+    },
+    "3%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "7%": {
+      opacity: "0",
+      boxShadow: "none",
+      filter: "brightness(0.3)",
+    },
+    "10%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "14%": {
+      opacity: "0",
+      filter: "brightness(0.3)",
+    },
+    "18%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "22%": {
+      opacity: "0.7",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(0.7)",
+    },
+    "26%": {
+      opacity: "0.9",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(0.9)",
+    },
+    "30%": {
+      opacity: "0.2",
+      boxShadow: "none",
+      filter: "brightness(0.3)",
+    },
+    "34%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "38%": {
+      opacity: "0.5",
+      boxShadow: "none",
+      filter: "brightness(0.5)",
+    },
+    "42%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "46%": {
+      opacity: "0.8",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(0.8)",
+    },
+    "50%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "60%": {
+      opacity: "0.9",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(0.9)",
+    },
+    "70%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "80%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "90%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 2px currentColor, inset 0 0 8px currentColor",
+      filter: "brightness(1)",
+    },
+    "100%": {
+      opacity: "1",
+      boxShadow:
+        "0 0 2px currentColor, 0 0 8px currentColor, inset 0 0 currentColor, inset 0 0 currentColor",
+      filter: "brightness(0.3)",
+    },
+  },
 };
 
 module.exports = keyframes;
