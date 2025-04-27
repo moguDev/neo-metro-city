@@ -15,6 +15,30 @@
     scale 0.3s ease-in-out;
 }
 
+.btn.btn-outline {
+  border: 2px solid currentColor;
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 8px currentColor;
+}
+.btn.btn-orange {
+  color: var(--neon-orange);
+}
+.btn.btn-pink {
+  color: var(--neon-pink);
+}
+.btn.btn-green {
+  color: var(--neon-green);
+}
+.btn.btn-purple {
+  color: var(--neon-pink);
+}
+.btn.btn-yellow {
+  color: var(--neon-yellow);
+}
+
 .btn:hover {
   filter: brightness(1.1);
 }

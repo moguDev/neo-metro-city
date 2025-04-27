@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from "./svg-icons/icons";
 import { componentsData } from "./ui-previews/componentsData";
 
 const SideMenu = () => {
@@ -7,7 +8,7 @@ const SideMenu = () => {
       <div className="drawer-left">
         <label htmlFor="side-drawer" className="drawer-overlay" />
         <h1 className="drawer-head text-neon-orange tracking-widest">MENU</h1>
-        <div className="drawer-content w-80">
+        <div className="drawer-content bg-transparent w-80">
           <ul className="">
             <li>
               <ul className="uppercase">
@@ -15,12 +16,15 @@ const SideMenu = () => {
                   Components
                 </h2>
                 {componentsData.map((data, idx) => (
-                  <li key={idx} className="p-1 tracking-wide">
+                  <li key={idx} className="group px-1 py-2 tracking-wide">
                     <a
-                      href={`/components/${data.label}`}
-                      className=" hover:text-neon-orange hover:underline cursor-pointer"
+                      href={`/components/${data.name}`}
+                      className="flex items-center justify-between hover:text-neon-orange hover:brightness-150 transition-all cursor-pointer"
                     >
-                      {data.label}
+                      {data.name.replace("-", " ")}
+                      <div className="neon-glow-soft -traslate-x-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+                        <ChevronRightIcon size={4} />
+                      </div>
                     </a>
                   </li>
                 ))}
