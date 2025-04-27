@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentData, ComponentVariant } from "@/types/component";
+import { ComponentVariant } from "@/types/component";
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
