@@ -1,32 +1,27 @@
+import ComponentPreviewer from "@/components/ComponentPreviewer";
 import { componentsData } from "@/components/ui-previews/componentsData";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-type componentPageProps = {
-  params: Promise<{
-    name: string;
-  }>;
+type Props = {
+  params: Promise<{ name: string }>;
 };
-const componentPage: React.FC<componentPageProps> = async ({ params }) => {
+
+const ComponentsPage = async ({ params }: Props) => {
   const { name } = await params;
-  const data = componentsData.find((data) => data.label === name);
+  const data = componentsData.find((data) => data.name === name);
+
   return (
-    <div className="pt-20 max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold tracking-wider">{data?.label}</h1>
-      <p className="mt-4 leading-6 tracking-wider">{data?.description}</p>
-      <div className="mt-4 text-shadow-none bg-cyber-dark rounded-md overflow-hidden">
-        <SyntaxHighlighter
-          language="jsx"
-          style={nightOwl}
-          customStyle={{
-            backgroundColor: "transparent",
-          }}
-        >
-          {"<div></div>"}
-        </SyntaxHighlighter>
+    <main className="pt-16 max-w-4xl mx-auto">
+      <div className="my-16">
+        <h1 className="text-3xl font-bold tracking-wider uppercase italic neon-border-b-orange py-4">
+          {name.replace("-", " ")}
+        </h1>
+        <p className="mt-4 leading-6 tracking-wider italic bg-cyber-dark px-4 py-6 rounded">
+          {data?.description}
+        </p>
+        {name && <ComponentPreviewer name={name} />}
       </div>
-    </div>
+    </main>
   );
 };
 
-export default componentPage;
+export default ComponentsPage;
