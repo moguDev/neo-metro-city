@@ -3,7 +3,7 @@ import dedent from "dedent";
 
 export const componentsData: ComponentData[] = [
   {
-    name: "Button",
+    name: "button",
     description:
       "Buttons let users perform actions in the interface. In Neo Metro City, they serve as clear and responsive elements designed for fast interactions.",
     variants: [
@@ -85,7 +85,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Swap",
+    name: "swap",
     description:
       "Swap lets you toggle between two elements, like flipping a switch in the neon-lit streets of Neo Metro City—perfect for interactive states and quick visual changes.",
     variants: [
@@ -408,7 +408,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Dropdown",
+    name: "dropdown",
     description:
       "Dropdowns reveal a list of options when activated, just like pulling a hidden neon panel from a high-tech wall in Neo Metro City.",
     variants: [
@@ -452,7 +452,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Modal",
+    name: "modal",
     description:
       "Modals are like neon popups in the cityscape, focusing user attention on a single task or message without leaving the current page.",
     variants: [
@@ -496,7 +496,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Accordion",
+    name: "accordion",
     description:
       "Accordions organize content into expandable sections, like unfolding secret panels in a futuristic building.",
     variants: [
@@ -542,7 +542,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "List",
+    name: "list",
     description:
       "Lists display items clearly and stylishly, like digital signboards showcasing important notices in Neo Metro City.",
     variants: [
@@ -570,7 +570,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Tabs",
+    name: "tabs",
     description:
       "Tabs separate content into panels, like different levels of a neon skyscraper, letting users move between them easily.",
     variants: [
@@ -598,7 +598,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Checkbox",
+    name: "checkbox",
     description:
       "Checkboxes allow users to select options, toggling features on and off like activating systems on a neon dashboard.",
     variants: [
@@ -616,7 +616,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Radio",
+    name: "radio",
     description:
       "Radio buttons allow users to pick one option from a set, perfect for making singular decisions with futuristic flair.",
     variants: [
@@ -639,7 +639,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Input field",
+    name: "input-field",
     description:
       "Input fields capture user input efficiently, styled like entering commands into a glowing console.",
     variants: [
@@ -654,7 +654,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Alert",
+    name: "alert",
     description:
       "Alerts grab user attention with important information, flashing like warning signals in the neon cityscape.",
     variants: [
@@ -665,9 +665,10 @@ export const componentsData: ComponentData[] = [
             <button
               className="btn"
               onClick={() => {
-                document
-                  .getElementById("neon-alert")
-                  ?.classList.remove("scale-0");
+                const elem = document.getElementById("neon-alert");
+                elem?.classList.remove("scale-0", "effect-neon-flicker");
+                void elem?.offsetWidth;
+                elem?.classList.add("effect-neon-flicker");
               }}
             >
               SHOW ALERT
@@ -677,7 +678,72 @@ export const componentsData: ComponentData[] = [
               className="alert scale-0 max-w-4xl w-[95%]"
               id="neon-alert"
             >
-              {/* svg icons and text */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="w-6 h-6 overflow-visible"
+              >
+                <defs>
+                  <filter
+                    id="glow"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                  >
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <path
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  stroke="#D2ECFA"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                  filter="url(#glow)"
+                />
+              </svg>
+              <span className="italic">THE FUTURE JUST ARRIVED!!</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={3}
+                stroke="currentColor"
+                className="size-4"
+                onClick={() => {
+                  document
+                    .getElementById("neon-alert")
+                    ?.classList.add("scale-0");
+                }}
+              >
+                <defs>
+                  <filter
+                    id="glow"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                  >
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                  filter="url(#glow)"
+                />
+              </svg>
             </div>
           </>
         ),
@@ -687,25 +753,25 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "Toggle",
+    name: "toggle",
     description:
       "Toggles switch a setting on and off, evoking the feeling of activating cybernetic implants.",
     variants: [
       {
         title: "Toggle",
         component: <input type="checkbox" className="toggle" />,
-        htmlStr: `<input type="checkbox" class="toggle" />`,
+        htmlStr: `<input type="checkbox" class="toggle">`,
         jsxStr: `<input type="checkbox" className="toggle" />`,
       },
     ],
   },
   {
-    name: "Side Drawer",
+    name: "drawer",
     description:
       "Side drawers slide from the edge to reveal hidden navigation panels, like secret alleys opening in Neo Metro City.",
     variants: [
       {
-        title: "Side Drawer",
+        title: "Drawer",
         component: (
           <>
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />

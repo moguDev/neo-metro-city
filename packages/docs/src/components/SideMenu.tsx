@@ -21,7 +21,7 @@ const SideMenu = () => {
                       href={`/components/${data.name}`}
                       className="flex items-center justify-between hover:text-neon-orange hover:brightness-150 transition-all cursor-pointer"
                     >
-                      {data.name}
+                      {data.name.replace("-", " ")}
                       <div className="neon-glow-soft -traslate-x-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
                         <ChevronRightIcon size={4} />
                       </div>
