@@ -30,4 +30,5 @@ export const topPreviewData: PreviewData[] = [
   { label: "alert", component: getPreviewComponent("alert") },
   { label: "toggle", component: getPreviewComponent("toggle") },
   { label: "drawer", component: getPreviewComponent("drawer") },
+  { label: "progress", component: getPreviewComponent("progress") },
 ];
