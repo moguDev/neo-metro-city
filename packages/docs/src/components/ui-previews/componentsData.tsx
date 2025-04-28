@@ -797,13 +797,20 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    label: "PROGRESS",
-    component: (
-      <>
-        <progress className="progress progress-orange" max="100" value="70">
-          70%
-        </progress>
-      </>
-    ),
+    name: "progress",
+    description:
+      "Progress indicators visualize ongoing processes or statuses. In Neo Metro City, they pulse like neon veins running through the city, signaling progress with vibrant, rhythmic energy.",
+    variants: [
+      {
+        title: "Progress",
+        component: (
+          <progress className="progress progress-orange" max="100" value="70" />
+        ),
+        htmlStr: "",
+        jsxStr: dedent(`
+          <progress className="progress progress-orange" max="100" value="70" />
+        `),
+      },
+    ],
   },
 ];
