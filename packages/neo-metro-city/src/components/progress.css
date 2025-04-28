@@ -1,0 +1,91 @@
+/* @author potatoman-dev */
+.progress {
+  display: block;
+  position: relative;
+  padding: 4px;
+  height: 16px;
+  min-height: 16px;
+  -moz-appearance: none;
+  border-radius: 3em;
+  border: 1px solid var(--neon-blue);
+  background-color: transparent;
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
+}
+
+.progress::-webkit-progress-bar {
+  /* プログレスバーの背景/-webkit- 用 */
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border-radius: 3em;
+  border: 2px solid transparent;
+}
+
+.progress::-webkit-progress-value {
+  /* プログレスバーの進捗部分/-webkit- 用 */
+  color: var(--neon-blue);
+  background-color: currentColor;
+  filter: brightness(1);
+  border-radius: 3em;
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor,
+    inset 0 0 8px currentColor;
+}
+
+.progress::-moz-progress-bar {
+  /* プログレスバーの進捗部分/-moz- 用 */
+  color: var(--neon-blue);
+  background-color: currentColor;
+  filter: brightness(1);
+  border-radius: 3em;
+  box-shadow:
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px currentColor,
+    0 0 8px currentColor,
+    inset 0 0 2px currentColor,
+    inset 0 0 4px currentColor,
+    inset 0 0 6px currentColor,
+    inset 0 0 8px currentColor;
+}
+.progress-orange.progress::-webkit-progress-value {
+  color: var(--neon-orange);
+}
+.progress-orange.progress::-moz-progress-bar {
+  color: var(--neon-orange);
+}
+.progress-pink.progress::-webkit-progress-value {
+  color: var(--neon-pink);
+}
+.progress-pink.progress::-moz-progress-bar {
+  color: var(--neon-pink);
+}
+.progress-purple.progress::-webkit-progress-value {
+  color: var(--neon-purple);
+}
+.progress-purple.progress::-moz-progress-bar {
+  color: var(--neon-purple);
+}
+.progress-green.progress::-webkit-progress-value {
+  color: var(--neon-green);
+}
+.progress-green.progress::-moz-progress-bar {
+  color: var(--neon-green);
+}
+.progress-yellow.progress::-webkit-progress-value {
+  color: var(--neon-yellow);
+}
+
+.progress-yellow.progress::-moz-progress-bar {
+  color: var(--neon-yellow);
+}

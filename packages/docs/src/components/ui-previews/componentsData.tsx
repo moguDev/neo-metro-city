@@ -796,4 +796,14 @@ export const componentsData: ComponentData[] = [
       },
     ],
   },
+  {
+    label: "PROGRESS",
+    component: (
+      <>
+        <progress className="progress progress-orange" max="100" value="70">
+          70%
+        </progress>
+      </>
+    ),
+  },
 ];
