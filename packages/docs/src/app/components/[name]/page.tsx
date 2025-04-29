@@ -10,7 +10,7 @@ const ComponentsPage = async ({ params }: Props) => {
   const data = componentsData.find((data) => data.name === name);
 
   return (
-    <main className="pt-16 max-w-4xl mx-auto">
+    <main className="pt-16 max-w-4xl md:mx-auto mx-[5%]">
       <div className="my-16">
         <h1 className="text-3xl font-bold tracking-wider uppercase italic neon-border-b-orange py-4">
           {name.replace("-", " ")}
