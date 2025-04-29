@@ -20,12 +20,12 @@ import {
 } from "./svg-icons/icons";
 
 const FRAMEWORKS = [
-  { icon: <ViteIcon size={16} />, name: "Vite", id: "vite" },
-  { icon: <ReactIcon size={16} />, name: "React", id: "react" },
-  { icon: <VueIcon size={16} />, name: "Vue", id: "vue" },
-  { icon: <RailsIcon size={16} />, name: "Ruby on Rails", id: "ruby-on-rails" },
-  { icon: <LaravelIcon size={16} />, name: "Laravel", id: "laravel" },
-  { icon: <DjangoIcon size={16} />, name: "django", id: "django" },
+  { icon: <ViteIcon size={20} />, name: "Vite", id: "vite" },
+  { icon: <ReactIcon size={20} />, name: "React", id: "react" },
+  { icon: <VueIcon size={20} />, name: "Vue", id: "vue" },
+  { icon: <RailsIcon size={20} />, name: "Ruby on Rails", id: "ruby-on-rails" },
+  { icon: <LaravelIcon size={20} />, name: "Laravel", id: "laravel" },
+  { icon: <DjangoIcon size={20} />, name: "django", id: "django" },
 ];
 
 const HowToInstallSection = () => {
@@ -111,7 +111,7 @@ const HowToInstallSection = () => {
               onChange={() => setSelectedTab("pnpm")}
             />
             <label className="tab" role="tab" htmlFor="pnpm-tab">
-              <PNPMIcon size={6} />
+              <PNPMIcon size={14} />
               <span className="ml-1">pnpm</span>
             </label>
             <input
@@ -122,7 +122,7 @@ const HowToInstallSection = () => {
               onChange={() => setSelectedTab("yarn")}
             />
             <label className="tab" role="tab" htmlFor="yarn-tab">
-              <YarnIcon size={6} />
+              <YarnIcon size={14} />
               <span className="ml-1">yarn</span>
             </label>
           </div>
