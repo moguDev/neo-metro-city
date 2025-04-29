@@ -1,6 +1,59 @@
+"use client";
+
+import { useState } from "react";
 import HashAnchor from "./HashAnchor";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import clsx from "clsx";
+import dedent from "dedent";
+import {
+  ClipboardIcon,
+  DjangoIcon,
+  LaravelIcon,
+  NPMIcon,
+  PNPMIcon,
+  RailsIcon,
+  ReactIcon,
+  ViteIcon,
+  VueIcon,
+  YarnIcon,
+} from "./svg-icons/icons";
+import { frame } from "framer-motion";
+
+const FRAMEWORKS = [
+  { icon: <ViteIcon size={16} />, name: "Vite", id: "vite" },
+  { icon: <ReactIcon size={16} />, name: "React", id: "react" },
+  { icon: <VueIcon size={16} />, name: "Vue", id: "vue" },
+  { icon: <RailsIcon size={16} />, name: "Ruby on Rails", id: "ruby-on-rails" },
+  { icon: <LaravelIcon size={16} />, name: "Laravel", id: "laravel" },
+  { icon: <DjangoIcon size={16} />, name: "django", id: "django" },
+];
 
 const HowToInstallSection = () => {
+  const [selectedTab, setSelectedTab] = useState<string>("npm");
+  const instllationCmd = () => {
+    switch (selectedTab) {
+      case "npm":
+        return "npm i -D neo-metro-city@latest";
+      case "pnpm":
+        return "pnpm add -D neo-metro-city@latest";
+      case "yarn":
+        return "yarn add -D neo-metro-city@latest";
+      default:
+        return "npm i neo-metro-city@latest";
+    }
+  };
+  const handleClickCopy = () => {
+    navigator.clipboard
+      .writeText(instllationCmd())
+      .then(() => {
+        console.log("Success: Copy to clicpboard");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  const stepTextCls = clsx("italic", "tracking-wider");
   return (
     <section className="py-4 md:text-base text-sm" id="how-to-install">
       <div className="sticky top-0 left-0 right-0 neon-border-b-orange py-4 z-40">
@@ -10,7 +63,7 @@ const HowToInstallSection = () => {
         </h2>
       </div>
       <div className="mx-2 my-4 space-y-8">
-        <p className="italic">
+        <p className={stepTextCls}>
           0. You need{" "}
           <a
             href="https://nodejs.org/en/download/"
@@ -29,89 +82,121 @@ const HowToInstallSection = () => {
           </a>{" "}
           installed.
         </p>
+
         {/* Step 1 */}
         <div>
-          <p className="italic">
+          <p className={stepTextCls}>
             1. Install{" "}
             <span className="font-semibold text-neon-orange underline tracking-wider blink">
               NEO MeTRO CITY
             </span>{" "}
             as a Node package
           </p>
-          <div className="tabs px-2">
-            <a className="tab tab-active font-semibold">
-              <svg
-                className="max-lg:hidden inline mr-1"
-                width="14"
-                height="14"
-                viewBox="0 0 256 256"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="m0 256v-256h256v256z" fill="#c12127" />
-                <path d="m48 48h160v160h-32v-128h-48v128h-80z" fill="#fff" />
-              </svg>
-              npm
-            </a>
-            <a className="tab font-semibold">
-              <svg
-                className="max-lg:hidden inline mr-1"
-                width="14"
-                height="14"
-                viewBox="0 0 32 32"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M30,10.75H21.251V2H30Z" style={{ fill: "#f9ad00" }} />
-                <path
-                  d="M20.374,10.75h-8.75V2h8.75Z"
-                  style={{ fill: "#f9ad00" }}
-                />
-                <path
-                  d="M10.749,10.75H2V2h8.749Z"
-                  style={{ fill: "#f9ad00" }}
-                />
-                <path
-                  d="M30,20.375H21.251v-8.75H30Z"
-                  style={{ fill: "#f9ad00" }}
-                />
-                <path
-                  d="M20.374,20.375h-8.75v-8.75h8.75Z"
-                  fill="currentColor"
-                />
-                <path d="M20.374,30h-8.75V21.25h8.75Z" fill="currentColor" />
-                <path d="M30,30H21.251V21.25H30Z" fill="currentColor" />
-                <path d="M10.749,30H2V21.25h8.749Z" fill="currentColor" />
-              </svg>
-              pnpm
-            </a>
-            <a className="tab font-semibold">
-              <svg
-                className="max-lg:hidden inline mr-1"
-                width="16"
-                height="16"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  strokeLinejoin="round"
-                  strokeLinecap="round"
-                  strokeWidth="2"
-                  fill="#117cad"
-                  stroke="none"
-                >
-                  <path d="M17.845 19.308c-1.268 .814 -2.41 1.254 -3.845 1.692c-.176 .21 -.645 .544 -.912 .588a42.469 42.469 0 0 1 -4.498 .412c-.812 .006 -1.31 -.214 -1.447 -.554c-.115 -.279 .336 -2.054 .298 -1.964c-.157 .392 -.575 1.287 -.997 1.72c-.579 .6 -1.674 .4 -2.322 .051c-.71 -.386 -.07 -1.28 -.346 -1.267c-.276 .014 -.776 -1.486 -.776 -2.236c0 -.828 .622 -1.674 1.235 -2.211a6.811 6.811 0 0 1 .46 -3.143a7.414 7.414 0 0 1 2.208 -2.615s-1.353 -1.534 -.849 -2.912c.328 -.902 .46 -.895 .567 -.935c.38 -.12 .727 -.33 1.013 -.612c.78 -.88 1.96 -1.438 3.116 -1.322c0 0 .781 -2.43 1.533 -1.936c.415 .653 .671 1.218 .967 1.936c0 0 1.15 -.7 1.25 -.5c.514 1.398 .487 3.204 .211 4.67c-.324 1.408 -.84 2.691 -1.711 3.83c-.094 .16 .98 .705 1.722 2.812c.686 1.928 .278 2.438 .278 2.688s.716 .144 2.296 -.855a5.848 5.848 0 0 1 2.984 -1.145c.735 -.066 .988 -.035 1.22 1c.232 1.035 -.346 1.406 -.744 1.506c0 0 -2.09 .675 -2.911 1.302z"></path>
-                </g>
-              </svg>
-              yarn
-            </a>
+          <div className="tabs px-4" role="tablist">
+            <input
+              type="radio"
+              id="npm-tab"
+              name="installation-tabs"
+              checked={selectedTab === "npm"}
+              onChange={() => setSelectedTab("npm")}
+            />
+            <label className="tab" role="tab" htmlFor="npm-tab">
+              <NPMIcon size={14} />
+              <span className="ml-1">npm</span>
+            </label>
+            <input
+              type="radio"
+              id="pnpm-tab"
+              name="installation-tabs"
+              checked={selectedTab === "pnpm"}
+              onChange={() => setSelectedTab("pnpm")}
+            />
+            <label className="tab" role="tab" htmlFor="pnpm-tab">
+              <PNPMIcon size={6} />
+              <span className="ml-1">pnpm</span>
+            </label>
+            <input
+              type="radio"
+              id="yarn-tab"
+              name="installation-tabs"
+              checked={selectedTab === "yarn"}
+              onChange={() => setSelectedTab("yarn")}
+            />
+            <label className="tab" role="tab" htmlFor="yarn-tab">
+              <YarnIcon size={6} />
+              <span className="ml-1">yarn</span>
+            </label>
           </div>
-          <div className="bg-cyber-dark font-mono p-4 rounded-xl md:text-base text-sm text-shadow-none">
-            <span className="select-none text-neon-orange text-shadow-none">
-              {">_"}
-            </span>{" "}
-            npm i neo-metro-city@latest
+          <div className="flex items-center justify-betreen bg-cyber-dark border border-gray-800 font-mono rounded-lg md:text-base text-sm text-neon-none">
+            <SyntaxHighlighter
+              language="shell"
+              style={atomDark}
+              customStyle={{ backgroundColor: "transparent", width: "100%" }}
+            >
+              {instllationCmd()}
+            </SyntaxHighlighter>
+            <button className="btn" onClick={handleClickCopy}>
+              <ClipboardIcon size={6} />
+            </button>
           </div>
         </div>
         {/* Step 2 */}
+        <div>
+          <p className={stepTextCls}>2. Sync Neo Metro City into Your App.</p>
+          <div className="flex items-center justify-between bg-cyber-dark rounded-lg border border-gray-800 text-neon-none mt-2">
+            <div className="relative">
+              <p className="absolute top-1.5 left-4 italic text-sm text-gray-500 font-sans">
+                app.css
+              </p>
+              <SyntaxHighlighter
+                language="css"
+                style={atomDark}
+                customStyle={{
+                  paddingTop: "24px",
+                  backgroundColor: "transparent",
+                  width: "100%",
+                }}
+              >
+                {dedent(`
+              @import "tailwindcss";
+              @plugin "neo-metro-city";`)}
+              </SyntaxHighlighter>
+            </div>
+            <button
+              className="btn"
+              onClick={() => {
+                navigator.clipboard
+                  .writeText(`@plugin "neo-metro-city";`)
+                  .then(() => {
+                    console.log("Success: Copy to clicpboard");
+                  })
+                  .catch((error) => {
+                    console.error(error);
+                  });
+              }}
+            >
+              <ClipboardIcon size={6} />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-20 neon-border-t neon-border-b py-8 relative">
+        <h3 className="z-1 absolute -top-4 left-0 right-0 w-full text-sm font-bold flex items-center justify-center">
+          <span className="tracking-widest text-neon-yellow uppercase italic w-fit font-bold px-4 py-1 border-neon-blue rounded-full bg-cyber-black">
+            install tutorials for Frameworks
+          </span>
+        </h3>
+        <div className="mt-2 grid grid-cols-3 gap-2">
+          {FRAMEWORKS.map((framework) => (
+            <div className="bg-cyber-black hover:bg-cyber-dark rounded-md border-2 border-gray-800 hover:border-neon-orange hover:-translate-y-1 flex flex-col items-center justify-center p-4 cursor-pointer min-h-32 transition-all duration-500">
+              {framework.icon}
+              <p className="text-sm font-bold tracking-widest mt-4">
+                {framework.name}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
