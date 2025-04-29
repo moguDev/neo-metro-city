@@ -18,7 +18,6 @@ import {
   VueIcon,
   YarnIcon,
 } from "./svg-icons/icons";
-import { frame } from "framer-motion";
 
 const FRAMEWORKS = [
   { icon: <ViteIcon size={16} />, name: "Vite", id: "vite" },
@@ -187,9 +186,12 @@ const HowToInstallSection = () => {
             install tutorials for Frameworks
           </span>
         </h3>
-        <div className="mt-2 grid grid-cols-3 gap-2">
-          {FRAMEWORKS.map((framework) => (
-            <div className="bg-cyber-black hover:bg-cyber-dark rounded-md border-2 border-gray-800 hover:border-neon-orange hover:-translate-y-1 flex flex-col items-center justify-center p-4 cursor-pointer min-h-32 transition-all duration-500">
+        <div className="mt-2 grid md:grid-cols-3 grid-cols-2 md:gap-2 gap-1">
+          {FRAMEWORKS.map((framework, index) => (
+            <div
+              key={index}
+              className="bg-cyber-black hover:bg-cyber-dark rounded-md border-2 border-gray-800 hover:border-neon-orange hover:-translate-y-1 flex flex-col items-center justify-center p-4 cursor-pointer min-h-32 transition-all duration-500"
+            >
               {framework.icon}
               <p className="text-sm font-bold tracking-widest mt-4">
                 {framework.name}
