@@ -16,10 +16,7 @@ const PreviewSection = ({
   index: number;
 }) => {
   const [selectedTab, setSelectedTab] = useState(1);
-
-  const handleTabChange = (tabIndex: number) => {
-    setSelectedTab(tabIndex);
-  };
+  const handleTabChange = (tabIndex: number) => setSelectedTab(tabIndex);
 
   const handleClickCopy = () => {
     navigator.clipboard
@@ -77,7 +74,7 @@ const PreviewSection = ({
         className={`relative text-shadow-none border border-gray-800 p-4 rounded-2xl transition-all ${selectedTab === 1 ? "bg-cyber-black" : "bg-cyber-dark"}`}
       >
         {selectedTab === 1 && (
-          <div className="flex items-center justify-center min-h-40">
+          <div className="flex items-center justify-center min-h-40 overflow-x-scroll">
             {variant.component}
           </div>
         )}{" "}
