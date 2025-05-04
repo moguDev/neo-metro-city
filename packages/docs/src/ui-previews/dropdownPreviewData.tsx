@@ -14,7 +14,7 @@ const dropdownPreviewData: ComponentPreviewData = {
           <label htmlFor="dropdown-toggle" className="font-bold">
             DROPDOWN
           </label>
-          <ul className="dropdown-content border-neon-blue w-52">
+          <ul className="dropdown-content border-neon w-52">
             <li>
               <a href="#">Item 1</a>
             </li>
@@ -28,7 +28,7 @@ const dropdownPreviewData: ComponentPreviewData = {
           <div class="dropdown">
             <input type="checkbox" id="dropdown-toggle" />
             <label for="dropdown-toggle" class="font-bold">DROPDOWN</label>
-            <ul class="dropdown-content border-neon-blue w-52">
+            <ul class="dropdown-content border-neon w-52">
               <li><a href="#">Item 1</a></li>
               <li><a href="#">Item 2</a></li>
             </ul>
@@ -37,7 +37,7 @@ const dropdownPreviewData: ComponentPreviewData = {
           <div className="dropdown">
             <input type="checkbox" id="dropdown-toggle" />
             <label htmlFor="dropdown-toggle" className="font-bold">DROPDOWN</label>
-            <ul className="dropdown-content border-neon-blue w-52">
+            <ul className="dropdown-content border-neon w-52">
               <li><a href="#">Item 1</a></li>
               <li><a href="#">Item 2</a></li>
             </ul>

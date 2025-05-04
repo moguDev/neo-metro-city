@@ -9,8 +9,8 @@ const listPreviewData: ComponentPreviewData = {
     {
       title: "List-outlined with Title",
       component: (
-        <ul className="list border-neon-blue">
-          <div className="list-title border-neon-blue rounded-full">
+        <ul className="list border-neon">
+          <div className="list-title border-neon rounded-full">
             <span className="font-bold text-neon-yellow">LIST TITLE</span>
           </div>
           <li className="list-row">
@@ -25,8 +25,8 @@ const listPreviewData: ComponentPreviewData = {
         </ul>
       ),
       htmlStr: dedent(`
-        <ul class="list border-neon-blue">
-          <div class="list-title border-neon-blue rounded-full">
+        <ul class="list border-neon">
+          <div class="list-title border-neon rounded-full">
             <span class="font-bold text-neon-yellow">LIST TITLE</span>
           </div>
           <li class="list-row">
@@ -40,8 +40,8 @@ const listPreviewData: ComponentPreviewData = {
           </li>
         </ul>`),
       jsxStr: dedent(`
-        <ul className="list border-neon-blue">
-          <div className="list-title border-neon-blue rounded-full">
+        <ul className="list border-neon">
+          <div className="list-title border-neon rounded-full">
             <span className="font-bold text-neon-yellow">LIST TITLE</span>
           </div>
           <li className="list-row">

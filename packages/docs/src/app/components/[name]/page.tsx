@@ -12,9 +12,15 @@ const ComponentsPage = async ({ params }: Props) => {
   return (
     <main className="pt-16 max-w-4xl md:mx-auto mx-[5%]">
       <div className="my-16">
-        <h1 className="text-3xl font-bold tracking-wider uppercase italic neon-border-b-orange py-4">
-          {name.replace("-", " ")}
-        </h1>
+        <div className="sticky top-0 flex items-center justify-between border-neon-b border-neon-orange px-1 py-4 z-40">
+          <h1 className="text-2xl font-bold tracking-wider uppercase italic">
+            {name.replace("-", " ")}
+          </h1>
+          <p className="italic font-bold">
+            <span className="mr-1 text-xl">{data?.variants.length}</span>
+            VARIANTS
+          </p>
+        </div>
         <p className="mt-4 leading-6 tracking-wider italic bg-cyber-dark px-4 py-6 rounded">
           {data?.description}
         </p>

@@ -55,7 +55,7 @@ const HowToInstallSection = () => {
   const stepTextCls = clsx("italic", "tracking-wider");
   return (
     <section className="py-4 md:text-base text-sm" id="how-to-install">
-      <div className="sticky top-0 left-0 right-0 neon-border-b-orange py-4 z-40">
+      <div className="sticky top-0 left-0 right-0 border-neon-b border-neon-orange py-4 z-40">
         <h2 className="text-xl font-bold inline italic tracking-wider">
           <HashAnchor id="#how-to-install" />
           HOW TO INSTALL
@@ -180,9 +180,9 @@ const HowToInstallSection = () => {
         </div>
       </div>
 
-      <div className="mt-20 neon-border-t neon-border-b py-8 relative">
+      <div className="mt-20 border-neon-t border-neon-b border-neon-blue py-8 relative">
         <h3 className="z-1 absolute -top-4 left-0 right-0 w-full text-sm font-bold flex items-center justify-center">
-          <span className="tracking-widest text-neon-yellow uppercase italic w-fit font-bold px-4 py-1 border-neon-blue rounded-full bg-cyber-black">
+          <span className="tracking-widest text-neon-yellow uppercase italic w-fit font-bold px-4 py-1 border-neon rounded-full bg-cyber-black">
             install tutorials for Frameworks
           </span>
         </h3>
@@ -190,7 +190,7 @@ const HowToInstallSection = () => {
           {FRAMEWORKS.map((framework, index) => (
             <div
               key={index}
-              className="bg-cyber-black hover:bg-cyber-dark rounded-md border-2 border-gray-800 hover:border-neon-orange hover:-translate-y-1 flex flex-col items-center justify-center p-4 cursor-pointer min-h-32 transition-all duration-500"
+              className="bg-cyber-black hover:bg-cyber-dark rounded-md border-2 border-gray-800 hover:border-neon hover:border-neon-orange hover:-translate-y-1 flex flex-col items-center justify-center p-4 cursor-pointer min-h-32 transition-all duration-500"
             >
               {framework.icon}
               <p className="text-sm font-bold tracking-widest mt-4">
