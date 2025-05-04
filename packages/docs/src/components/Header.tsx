@@ -7,16 +7,16 @@ const Header = () => {
     { href: "#", text: "Effects" },
   ];
   return (
-    <header className="absolute top-0 left-0 right-0 mx-2 h-16 neon-border-b-orange select-none z-50">
+    <header className="absolute top-0 left-0 right-0 mx-2 h-16 border-neon-b border-neon-orange select-none z-50">
       <div className="flex items-center justify-between h-full p-2">
         <div className="flex items-center gap-2">
           <label htmlFor="side-drawer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              strokeWidth="1.5"
+              strokeWidth="2.5"
               stroke="currentColor"
-              className="size-6 text-white cursor-pointer"
+              className="size-6 text-white cursor-pointer overflow-visible"
             >
               <defs>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">

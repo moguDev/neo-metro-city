@@ -10,7 +10,7 @@ const accordionPreviewData: ComponentPreviewData = {
       title: "Accordion",
       component: (
         <div className="join w-xl">
-          <div className="neon-accordion neon-border-b">
+          <div className="neon-accordion border-neon-b">
             <input type="radio" name="neon-accordion" />
             <div className="neon-accordion-title font-bold">
               ACCESS THE GRID
@@ -24,7 +24,7 @@ const accordionPreviewData: ComponentPreviewData = {
             </div>
           </div>
 
-          <div className="neon-accordion neon-border-b">
+          <div className="neon-accordion border-neon-b">
             <input type="radio" name="neon-accordion" />
             <div className="neon-accordion-title text-neon-orange font-bold">
               INITIATE PROTOCOL
@@ -52,7 +52,7 @@ const accordionPreviewData: ComponentPreviewData = {
       ),
       htmlStr: dedent(`
         <div class="join w-xl">
-          <div class="neon-accordion neon-border-b">
+          <div class="neon-accordion border-neon-b">
             <input type="radio" name="neon-accordion">
             <div class="neon-accordion-title font-bold">
               ACCESS THE GRID
@@ -66,7 +66,7 @@ const accordionPreviewData: ComponentPreviewData = {
             </div>
           </div>
 
-          <div class="neon-accordion neon-border-b">
+          <div class="neon-accordion border-neon-b">
             <input type="radio" name="neon-accordion">
             <div class="neon-accordion-title text-neon-orange font-bold">
               INITIATE PROTOCOL
@@ -93,7 +93,7 @@ const accordionPreviewData: ComponentPreviewData = {
         </div>`),
       jsxStr: dedent(`
         <div className="join w-xl">
-          <div className="neon-accordion neon-border-b">
+          <div className="neon-accordion border-neon-b">
             <input type="radio" name="neon-accordion" />
             <div className="neon-accordion-title font-bold">
               ACCESS THE GRID
@@ -107,7 +107,7 @@ const accordionPreviewData: ComponentPreviewData = {
             </div>
           </div>
 
-          <div className="neon-accordion neon-border-b">
+          <div className="neon-accordion border-neon-b">
             <input type="radio" name="neon-accordion" />
             <div className="neon-accordion-title text-neon-orange font-bold">
               INITIATE PROTOCOL
