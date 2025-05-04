@@ -50,6 +50,12 @@
   margin: auto;
   border-radius: 0.5rem;
   padding: 1.5rem;
+  border: 2px solid var(--neon-blue);
+  box-shadow:
+    0 0 2px var(--neon-blue),
+    0 0 8px var(--neon-blue),
+    inset 0 0 2px var(--neon-blue),
+    inset 0 0 8px var(--neon-blue);
 }
 
 .modal[open] > .modal-box {
@@ -58,7 +64,6 @@
 }
 
 .modal-head {
-  text-transform: uppercase;
   color: var(--neon-orange);
   font-weight: bold;
   background-color: var(--cyber-dark);

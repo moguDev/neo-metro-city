@@ -9,7 +9,7 @@
   border-radius: 0;
   background-color: transparent;
   position: relative;
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0.25rem;
 }
 
 .neon-accordion-title {
@@ -50,7 +50,7 @@
   position: absolute;
   opacity: 0;
   width: 100%;
-  height: 2.5rem;
+  height: 100%;
   top: 0;
   left: 0;
   margin: 0;
@@ -66,7 +66,7 @@
 .neon-accordion input[type="radio"]:checked ~ .neon-accordion-content {
   grid-template-rows: max-content 1fr;
   height: fit-content;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
   opacity: 1;
   text-shadow:
     0 0 0.1em currentColor,
