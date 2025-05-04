@@ -1,5 +1,5 @@
 import ComponentPreviewer from "@/components/ComponentPreviewer";
-import { componentsData } from "@/components/ui-previews/componentsData";
+import { componentsPreviewDatas } from "@/ui-previews";
 
 type Props = {
   params: Promise<{ name: string }>;
@@ -7,7 +7,7 @@ type Props = {
 
 const ComponentsPage = async ({ params }: Props) => {
   const { name } = await params;
-  const data = componentsData.find((data) => data.name === name);
+  const data = componentsPreviewDatas.find((data) => data.name === name);
 
   return (
     <main className="pt-16 max-w-4xl md:mx-auto mx-[5%]">
