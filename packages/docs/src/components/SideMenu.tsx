@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from "./svg-icons/icons";
-import { componentsData } from "./ui-previews/componentsData";
+import { componentsPreviewDatas } from "../ui-previews";
 
 const SideMenu = () => {
   return (
@@ -15,7 +15,7 @@ const SideMenu = () => {
                 <h2 className="text-lg text-neon-orange font-bold italic uppercase">
                   Components
                 </h2>
-                {componentsData.map((data, idx) => (
+                {componentsPreviewDatas.map((data, idx) => (
                   <li key={idx} className="group px-1 py-2 tracking-wide">
                     <a
                       href={`/components/${data.name}`}
