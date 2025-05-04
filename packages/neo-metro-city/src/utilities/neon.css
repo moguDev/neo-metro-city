@@ -45,34 +45,30 @@
 
 /* Text Neon */
 .text-neon-none,
-.text-neon-none > *,
-.text-neon-none > * * {
+.text-neon-none * {
   text-shadow: none !important;
 }
 
 .text-neon-blue {
-  color: var(--neon-blue);
-  text-shadow: inherit;
+  --neon-text-color: var(--neon-blue);
 }
-
 .text-neon-orange {
-  color: var(--neon-orange);
+  --neon-text-color: var(--neon-orange);
 }
-
+.text-neon-red {
+  --neon-text-color: var(--neon-red);
+}
 .text-neon-pink {
-  color: var(--neon-pink);
+  --neon-text-color: var(--neon-pink);
 }
-
 .text-neon-purple {
-  color: var(--neon-purple);
+  --neon-text-color: var(--neon-purple);
 }
-
 .text-neon-green {
-  color: var(--neon-green);
+  --neon-text-color: var(--neon-green);
 }
-
 .text-neon-yellow {
-  color: var(--neon-yellow);
+  --neon-text-color: var(--neon-yellow);
 }
 
 .turnon {
@@ -83,166 +79,86 @@
 }
 
 /* Box-Border Neon */
+.border-neon {
+  --neon-border-color: var(--neon-blue);
+  border: 2px solid var(--neon-border-color);
+  box-shadow:
+    0 0 2px var(--neon-border-color),
+    0 0 8px var(--neon-border-color),
+    inset 0 0 2px var(--neon-border-color),
+    inset 0 0 8px var(--neon-border-color);
+}
+
 .border-neon-blue {
-  border: 2px solid var(--neon-blue);
-  box-shadow:
-    0 0 2px var(--neon-blue),
-    0 0 8px var(--neon-blue),
-    inset 0 0 2px var(--neon-blue),
-    inset 0 0 8px var(--neon-blue);
+  --neon-border-color: var(--neon-blue);
 }
-
 .border-neon-orange {
-  box-sizing: border-box;
-  border: 2px solid var(--neon-orange);
-  box-shadow:
-    0 0 2px var(--neon-orange),
-    0 0 8px var(--neon-orange),
-    inset 0 0 2px var(--neon-orange),
-    inset 0 0 8px var(--neon-orange);
+  --neon-border-color: var(--neon-orange);
+}
+.border-neon-red {
+  --neon-border-color: var(--neon-red);
+}
+.border-neon-green {
+  --neon-border-color: var(--neon-green);
+}
+.border-neon-pink {
+  --neon-border-color: var(--neon-pink);
+}
+.border-neon-purple {
+  --neon-border-color: var(--neon-purple);
+}
+.border-neon-yellow {
+  --neon-border-color: var(--neon-yellow);
 }
 
-/* Neon-Border-* */
-.neon-border-t,
-.neon-border-b,
-.neon-border-r,
-.neon-border-r-orange,
-.neon-border-b-orange {
+.border-neon-t,
+.border-neon-r,
+.border-neon-b,
+.border-neon-l {
   position: relative;
 }
 
-/* Top-Border Neon */
-.neon-border-t::before {
+.border-neon-t::before,
+.border-neon-r::before,
+.border-neon-b::after,
+.border-neon-l::after {
+  pointer-events: none;
   content: "";
   position: absolute;
-  color: var(--neon-blue);
+  border-radius: 2px;
+  border: 1px solid var(--neon-border-color);
+  box-shadow:
+    0 0 2px var(--neon-border-color),
+    0 0 4px var(--neon-border-color),
+    0 0 6px var(--neon-border-color),
+    0 0 8px var(--neon-border-color),
+    inset 0 0 2px var(--neon-border-color),
+    inset 0 0 4px var(--neon-border-color),
+    inset 0 0 6px var(--neon-border-color),
+    inset 0 0 8px var(--neon-border-color);
+}
+
+.border-neon-t::before {
   left: 0;
   right: 0;
-  border: 1px solid currentColor;
   top: 2px;
   height: 0px;
-  pointer-events: none;
-  border-radius: 2px;
-  box-shadow:
-    0 0 2px currentColor,
-    0 0 4px currentColor,
-    0 0 6px currentColor,
-    0 0 8px currentColor,
-    inset 0 0 2px currentColor,
-    inset 0 0 4px currentColor,
-    inset 0 0 6px currentColor,
-    inset 0 0 8px currentColor;
 }
-
-/* Right-Border Neon */
-.neon-border-r::after {
-  content: "";
-  position: absolute;
-  color: var(--neon-blue);
+.border-neon-r::before {
   top: 0;
   bottom: 0;
   right: -2px;
   width: 0px;
-  pointer-events: none;
-  border: 1px solid currentColor;
-  border-radius: 2px;
-  box-shadow:
-    0 0 2px currentColor,
-    0 0 4px currentColor,
-    0 0 6px currentColor,
-    0 0 8px currentColor,
-    inset 0 0 2px currentColor,
-    inset 0 0 4px currentColor,
-    inset 0 0 6px currentColor,
-    inset 0 0 8px currentColor;
 }
-
-.neon-border-r-orange::after {
-  content: "";
-  position: absolute;
-  color: var(--neon-orange);
-  top: 0;
-  bottom: 0;
-  right: -2px;
-  width: 0px;
-  pointer-events: none;
-  border: 1px solid currentColor;
-  border-radius: 2px;
-  box-shadow:
-    0 0 2px currentColor,
-    0 0 4px currentColor,
-    0 0 6px currentColor,
-    0 0 8px currentColor,
-    inset 0 0 2px currentColor,
-    inset 0 0 4px currentColor,
-    inset 0 0 6px currentColor,
-    inset 0 0 8px currentColor;
-}
-/* Bottom-Border Neon */
-.neon-border-b::after {
-  content: "";
-  position: absolute;
-  color: var(--neon-blue);
+.border-neon-b::after {
   left: 0;
   right: 0;
-  border: 1px solid currentColor;
   bottom: -2px;
   height: 0px;
-  pointer-events: none;
-  border-radius: 2px;
-  box-shadow:
-    0 0 2px currentColor,
-    0 0 4px currentColor,
-    0 0 6px currentColor,
-    0 0 8px currentColor,
-    inset 0 0 2px currentColor,
-    inset 0 0 4px currentColor,
-    inset 0 0 6px currentColor,
-    inset 0 0 8px currentColor;
 }
-
-.neon-border-b-orange::after {
-  content: "";
-  position: absolute;
-  color: var(--neon-orange);
-  left: 0;
-  right: 0;
-  border: 1px solid currentColor;
-  bottom: -2px;
-  height: 0px;
-  pointer-events: none;
-  border-radius: 2px;
-  box-shadow:
-    0 0 2px currentColor,
-    0 0 4px currentColor,
-    0 0 6px currentColor,
-    0 0 8px currentColor,
-    inset 0 0 2px currentColor,
-    inset 0 0 4px currentColor,
-    inset 0 0 6px currentColor,
-    inset 0 0 8px currentColor;
-}
-
-.border-r-neon-blue {
-  position: relative;
-}
-.border-r-neon-blue::after {
-  content: "";
-  position: absolute;
+.border-neon-l::after {
   top: 0;
   bottom: 0;
-  border: 1px solid var(--neon-blue);
-  right: -2px;
+  left: 2px;
   width: 0px;
-  pointer-events: none;
-  border-radius: 2px;
-  box-shadow:
-    0 0 2px var(--neon-blue),
-    0 0 4px var(--neon-blue),
-    0 0 6px var(--neon-blue),
-    0 0 8px var(--neon-blue),
-    inset 0 0 2px var(--neon-blue),
-    inset 0 0 4px var(--neon-blue),
-    inset 0 0 6px var(--neon-blue),
-    inset 0 0 8px var(--neon-blue);
 }

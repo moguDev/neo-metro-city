@@ -2,18 +2,18 @@
   --cyber-black: #0a0a12;
   --cyber-dark: #0e0e20;
 
-  --neon-orange: #eb9f5d;
-  --neon-pink: #ff2d95;
   --neon-blue: #d2ecfa;
-  --neon-purple: #a742f5;
-  --neon-green: #36f1cd;
-  --neon-yellow: #ffde03;
+  --neon-orange: #eb9f5d;
+  --neon-red: #e6003c;
+  --neon-pink: #ff1e73;
+  --neon-purple: #8b4fff;
+  --neon-green: #00ffc2;
+  --neon-yellow: #fff95b;
 }
 
 html,
 body {
   background-color: var(--cyber-black);
-  color: var(--neon-blue);
 }
 
 html:has(.drawer-toggle:checked) {
@@ -21,9 +21,10 @@ html:has(.drawer-toggle:checked) {
 }
 
 * {
-  color: var(--neon-blue);
+  --neon-text-color: var(--neon-blue);
+  --neon-border-color: var(--neon-blue);
+  color: var(--neon-text-color);
   text-shadow:
-    0.2em 0.2em 0.5em var(--cyber-black),
     0 0 0.1em currentColor,
     0 0 0.5em currentColor;
 }
