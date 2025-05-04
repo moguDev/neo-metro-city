@@ -31,7 +31,7 @@ const PreviewSection = ({
 
   return (
     <section id={`variant-${index}`} className="w-full">
-      <h2 className="text-2xl font-bold px-2">
+      <h2 className="text-xl font-bold px-2">
         <HashAnchor id={`#variant-${index}`} />
         {variant.title}
       </h2>
