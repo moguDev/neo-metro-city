@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import HashAnchor from "./HashAnchor";
-import { componentsData } from "./ui-previews/componentsData";
+import { componentsPreviewDatas } from "../ui-previews";
 import Link from "next/link";
 
 const ComponentsSection = () => {
@@ -11,7 +11,7 @@ const ComponentsSection = () => {
         <h2 className="text-xl font-bold italic uppercase tracking-wider">
           <HashAnchor id="#components" />
           <span className="mr-1 text-2xl text-neon-yellow neon-glow-soft">
-            {componentsData.length}
+            {componentsPreviewDatas.length}
           </span>
           Components
         </h2>
@@ -51,7 +51,7 @@ const ComponentsSection = () => {
               </p>
               <p className="text-xs mt-2 leading-5 tracking-wider italic group-hover:turnon turnoff transition-all">
                 {
-                  componentsData.find((data) => data.name === component)
+                  componentsPreviewDatas.find((data) => data.name === component)
                     ?.description
                 }
               </p>

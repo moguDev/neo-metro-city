@@ -1,12 +1,12 @@
 "use client";
 
-import { ComponentVariant } from "@/types/component";
+import { ComponentVariant } from "@/types";
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { ClipboardIcon } from "@icons";
 import HashAnchor from "./HashAnchor";
-import { componentsData } from "./ui-previews/componentsData";
+import { componentsPreviewDatas } from "../ui-previews";
 
 const PreviewSection = ({
   variant,
@@ -74,7 +74,7 @@ const PreviewSection = ({
         className={`relative text-shadow-none border border-gray-800 p-4 rounded-2xl transition-all ${selectedTab === 1 ? "bg-cyber-black" : "bg-cyber-dark"}`}
       >
         {selectedTab === 1 && (
-          <div className="flex items-center justify-center min-h-40 overflow-x-scroll">
+          <div className="flex items-center justify-center px-5 py-10 min-h-40 overflow-auto">
             {variant.component}
           </div>
         )}{" "}
@@ -114,7 +114,7 @@ const PreviewSection = ({
 };
 
 const ComponentPreviewer = ({ name }: { name: string }) => {
-  const data = componentsData.find((data) => data.name === name);
+  const data = componentsPreviewDatas.find((data) => data.name === name);
   return (
     <div className="flex flex-col items-center gap-14 w-full mt-12">
       {data?.variants.map((variant, idx) => (

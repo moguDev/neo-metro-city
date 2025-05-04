@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type ComponentData = {
+export type ComponentPreviewData = {
   name: string;
   description: string;
   variants: ComponentVariant[];
