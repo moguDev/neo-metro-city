@@ -570,7 +570,7 @@ export const componentsData: ComponentData[] = [
     ],
   },
   {
-    name: "tabs",
+    name: "tab",
     description:
       "Tabs separate content into panels, like different levels of a neon skyscraper, letting users move between them easily.",
     variants: [
@@ -592,8 +592,32 @@ export const componentsData: ComponentData[] = [
             </label>
           </div>
         ),
-        htmlStr: `...`,
-        jsxStr: `...`,
+        htmlStr: dedent(`
+          <div class="tabs" role="tablist">
+            <input type="radio" id="tab1" name="tabs" checked>
+            <label class="tab" role="tab" for="tab1">Tab 1</label>
+
+            <input type="radio" id="tab2" name="tabs" />
+            <label class="tab" role="tab" for="tab2">Tab 2</label>
+
+            <input type="radio" id="tab3" name="tabs" />
+            <label class="tab" role="tab" for="tab3">Tab 3</label>
+          </div>`),
+        jsxStr: dedent(`
+          <div className="tabs" role="tablist">
+            <input type="radio" id="tab1" name="tabs" defaultChecked />
+            <label className="tab" role="tab" htmlFor="tab1">
+              Tab 1
+            </label>
+            <input type="radio" id="tab2" name="tabs" />
+            <label className="tab" role="tab" htmlFor="tab2">
+              Tab 2
+            </label>
+            <input type="radio" id="tab3" name="tabs" />
+            <label className="tab" role="tab" htmlFor="tab3">
+              Tab 3
+            </label>
+          </div>`),
       },
     ],
   },
@@ -661,94 +685,63 @@ export const componentsData: ComponentData[] = [
       {
         title: "Alert",
         component: (
-          <>
-            <button
-              className="btn"
-              onClick={() => {
-                const elem = document.getElementById("neon-alert");
-                elem?.classList.remove("scale-0", "effect-neon-flicker");
-                void elem?.offsetWidth;
-                elem?.classList.add("effect-neon-flicker");
-              }}
+          <div role="alert" className="alert w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="size-6 overflow-visible"
             >
-              SHOW ALERT
-            </button>
-            <div
-              role="alert"
-              className="alert scale-0 max-w-4xl w-[95%]"
-              id="neon-alert"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="w-6 h-6 overflow-visible"
-              >
-                <defs>
-                  <filter
-                    id="glow"
-                    x="-50%"
-                    y="-50%"
-                    width="200%"
-                    height="200%"
-                  >
-                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
-                    <feMerge>
-                      <feMergeNode in="coloredBlur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <path
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  stroke="#D2ECFA"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                  filter="url(#glow)"
-                />
-              </svg>
-              <span className="italic">THE FUTURE JUST ARRIVED!!</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke="#D2ECFA"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={3}
-                stroke="currentColor"
-                className="size-4"
-                onClick={() => {
-                  document
-                    .getElementById("neon-alert")
-                    ?.classList.add("scale-0");
-                }}
-              >
-                <defs>
-                  <filter
-                    id="glow"
-                    x="-50%"
-                    y="-50%"
-                    width="200%"
-                    height="200%"
-                  >
-                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
-                    <feMerge>
-                      <feMergeNode in="coloredBlur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                  filter="url(#glow)"
-                />
-              </svg>
-            </div>
-          </>
+                filter="url(#glow)"
+              />
+            </svg>
+            <span className="italic">THE FUTURE JUST ARRIVED!!</span>
+          </div>
         ),
         htmlStr: `...`,
-        jsxStr: `...`,
+        jsxStr: dedent(`
+          <div role="alert" className="alert">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="size-6 overflow-visible"
+            >
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke="#D2ECFA"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+                filter="url(#glow)"
+              />
+            </svg>
+            <span className="italic">THE FUTURE JUST ARRIVED!!</span>
+          </div>`),
       },
     ],
   },
