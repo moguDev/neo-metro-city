@@ -40,7 +40,7 @@ const Header = () => {
               NEO M<span className="text-neon-orange">e</span>TRO CITY
             </p>
             <p className="ml-1 text-shadow-none opacity-80 text-sm font-mono bg-cyber-dark px-2 py-1 rounded-lg">
-              v1.0.0
+              v0.1.0
             </p>
           </Link>
         </div>
