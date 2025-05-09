@@ -1,9 +1,9 @@
 {
   "type": "module",
   "name": "neo-metro-city",
-  "version": "0.0.7",
-  "description": "NEO MeTRO CITY - the most geeky UI Library for Tailwind CSS",
-  "author": "Neo Metro Lab",
+  "version": "0.1.0",
+  "description": "NEO MeTRO CITY: The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.",
+  "author": "Neo Metro Labs",
   "license": "MIT",
   "homepage": "https://neo-metro.dev",
   "main": "index.js",
