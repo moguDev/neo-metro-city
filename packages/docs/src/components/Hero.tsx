@@ -45,9 +45,9 @@ const Hero = () => {
       </h1>
       <TypingText />
       <div className="flex items-center justify-center flex-wrap gap-4 p-4 my-4">
-        <img src={"https://img.shields.io/npm/v/matsushita-ui?color=blue"} />
-        <img src={"https://img.shields.io/npm/l/matsushita-ui.svg"} />
-        <img src={"https://img.shields.io/npm/dt/matsushita-ui?color-red"} />
+        <img src={"https://img.shields.io/npm/v/neo-metro-city?color=blue"} />
+        <img src={"https://img.shields.io/npm/l/neo-metro-city.svg"} />
+        <img src={"https://img.shields.io/npm/dt/neo-metro-city?color-red"} />
         <img
           src="https://img.shields.io/badge/contributions-welcome-orange.svg"
           alt="Contributions welcome"
