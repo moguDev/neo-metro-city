@@ -6,15 +6,23 @@
 }
 
 /* 消灯, 点滅*/
-.turnoff {
+.turnoff,
+.turnoff * {
   filter: brightness(0.5);
   text-shadow: none;
   box-shadow: none;
+  animation: none;
 }
 
 .turnon {
   filter: brightness(1);
   text-shadow: inherit;
+}
+.turnon {
+  text-shadow:
+    0 0 0.1em currentColor,
+    0 0 0.5em currentColor;
+  filter: brightness(1);
 }
 
 .blink {
@@ -69,13 +77,6 @@
 }
 .text-neon-yellow {
   --neon-text-color: var(--neon-yellow);
-}
-
-.turnon {
-  text-shadow:
-    0 0 0.1em currentColor,
-    0 0 0.5em currentColor;
-  filter: brightness(1);
 }
 
 /* Box-Border Neon */
