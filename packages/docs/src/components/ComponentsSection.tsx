@@ -26,7 +26,7 @@ const ComponentsSection = () => {
             <Image
               className="rounded-lg"
               src={`/${previewData.name}_component.webp`}
-              alt="button_component"
+              alt={`${previewData.name}_component`}
               width={800}
               height={418}
             />
