@@ -1,4 +1,25 @@
 const keyframes = {
+  "@keyframes loading-dot": {
+    "0%, 100%": {
+      filter: "brightness(0.3)",
+      boxShadow: "none",
+    },
+    "50%": {
+      filter: "brightness(1)",
+      boxShadow: `
+        0 0 4px var(--neon-blue),
+        0 0 10px var(--neon-blue)
+      `,
+    },
+  },
+  "@keyframes status": {
+    "0%, 100%": {
+      filter: "brightness(0.4)",
+    },
+    "50%": {
+      filter: "brightness(1.2)",
+    },
+  },
   "@keyframes neon-blink": {
     "0%, 100%": {
       filter: "brightness(0.9)",
