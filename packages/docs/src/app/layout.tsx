@@ -32,6 +32,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title:
       "NEO MeTRO CITY: The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.",
+    images: [
+      {
+        url: "/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "NEO MeTRO CITY",
+      },
+    ],
     creator: "@mogu_57B",
   },
 };
