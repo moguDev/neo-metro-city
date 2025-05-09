@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import BackgroundShowcase from "@/components/BackgroundShowcase";
 import SideMenu from "@/components/SideMenu";
+import { AlertProvider } from "@/components/AlertProvider";
 
 export const metadata: Metadata = {
   title:
@@ -54,7 +55,9 @@ export default function RootLayout({
       <body className="font-quicksand w-full min-h-screen overflow-x-hidden">
         <BackgroundShowcase />
         <Header />
-        <div className="relative">{children}</div>
+        <AlertProvider>
+          <div className="relative">{children}</div>
+        </AlertProvider>
         <SideMenu />
       </body>
     </html>
