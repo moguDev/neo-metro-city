@@ -9,7 +9,7 @@
 ## Contributing
 
 <i>The future of Neo Metro City is built by its community.
-Join us — read the <a>contributing guide</a>.</i>
+Join us — read the <a href="https://github.com/moguDev/neo-metro-city/blob/main/.github/CONTRIBUTING.md">contributing guide</a>.</i>
 
 ## License
 
