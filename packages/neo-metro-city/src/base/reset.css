@@ -9,6 +9,9 @@
   --neon-purple: #8b4fff;
   --neon-green: #00ffc2;
   --neon-yellow: #fff95b;
+
+  --color-primary: var(--neon-blue);
+  --color-accent: var(--neon-blue);
 }
 
 html,
