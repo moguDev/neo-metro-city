@@ -1,6 +1,3 @@
-"use client";
-import Image from "next/image";
-
 const Footer = () => {
   return (
     <footer className="w-full overflow-hidden h-fit mt-32 p-3 select-none">
