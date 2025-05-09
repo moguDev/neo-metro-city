@@ -1,0 +1,40 @@
+.fieldset {
+  border: 1px solid var(--neon-border-color, #d2ecfa);
+  padding: 1.25rem 1rem;
+  border-radius: 0.75rem;
+  position: relative;
+  --neon-border-color: var(--neon-blue);
+  border: 2px solid var(--neon-border-color);
+  box-shadow:
+    0 0 2px var(--neon-border-color),
+    0 0 8px var(--neon-border-color),
+    inset 0 0 2px var(--neon-border-color),
+    inset 0 0 8px var(--neon-border-color);
+}
+
+.fieldset-legend {
+  background-color: var(--cyber-black);
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  --neon-border-color: var(--neon-blue);
+  border-radius: 99px;
+  border: 2px solid var(--neon-border-color);
+  box-shadow:
+    0 0 2px var(--neon-border-color),
+    0 0 8px var(--neon-border-color),
+    inset 0 0 2px var(--neon-border-color),
+    inset 0 0 8px var(--neon-border-color);
+}
+
+.fieldset > .input {
+  width: 100%;
+}
+
+.label {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: var(--neon-border-color, #d2ecfa);
+  font-style: italic;
+  text-shadow: 0 0 2px currentColor;
+}

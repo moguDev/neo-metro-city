@@ -1,0 +1,35 @@
+.status {
+  --neon-dot-color: currentColor;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--neon-dot-color);
+  box-shadow:
+    0 0 2px var(--neon-dot-color),
+    0 0 6px var(--neon-dot-color);
+  transition:
+    filter 0.3s,
+    box-shadow 0.3s;
+  animation: status 1.5s infinite ease-in-out;
+}
+
+.status-online {
+  --neon-dot-color: var(--neon-green, #00ffc2);
+}
+
+.status-offline {
+  --neon-dot-color: var(--neon-blue, #d2ecfa);
+}
+
+.status-error {
+  --neon-dot-color: var(--neon-red, #ff2965);
+}
+
+.status-warn {
+  --neon-dot-color: var(--neon-orange, #eb9f5d);
+}
+
+.status-idle {
+  --neon-dot-color: var(--neon-yellow, #ffde03);
+}
