@@ -1,0 +1,42 @@
+.badge {
+  --neon-border-color: var(--neon-blue);
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 1px solid var(--neon-border-color);
+  box-shadow:
+    0 0 2px var(--neon-border-color),
+    0 0 8px var(--neon-border-color),
+    inset 0 0 2px var(--neon-border-color),
+    inset 0 0 8px var(--neon-border-color);
+  transition:
+    filter 0.3s,
+    box-shadow 0.3s;
+}
+
+.badge-blue {
+  --neon-text-color: var(--neon-blue, #d2ecfa);
+  --neon-border-color: var(--neon-blue, #d2ecfa);
+}
+.badge-orange {
+  --neon-text-color: var(--neon-orange, #eb9f5d);
+  --neon-border-color: var(--neon-orange, #eb9f5d);
+}
+.badge-pink {
+  --neon-text-color: var(--neon-pink, #ff1e73);
+  --neon-border-color: var(--neon-pink, #ff1e73);
+}
+.badge-green {
+  --neon-text-color: var(--neon-green, #00d8a2);
+  --neon-border-color: var(--neon-green, #00d8a2);
+}
+.badge-red {
+  --neon-text-color: var(--neon-red, #ff2965);
+  --neon-border-color: var(--neon-red, #ff2965);
+}
+.badge-yellow {
+  --neon-text-color: var(--neon-yellow, #ffde03);
+  --neon-border-color: var(--neon-yellow, #ffde03);
+}
