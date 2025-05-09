@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 
 const TypingText = () => {
-  const fullText =
-    "Thhe most geeky UI Components & Effects Library for Tailwind CSS.";
+  const fullText = "Thhe most cyber-geek UI library for Tailwind CSS.";
   const [displayedText, setDisplayedText] = useState("");
   const [isFinished, setIsFinished] = useState(false);
 
