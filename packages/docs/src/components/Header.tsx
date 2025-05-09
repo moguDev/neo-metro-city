@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Header = () => {
   const links = [
-    { href: "#components", text: "Components" },
-    { href: "#", text: "Effects" },
+    { href: "\/#how-to-install", text: "Install" },
+    { href: "\/#components", text: "Components" },
   ];
   return (
     <header className="absolute top-0 left-0 right-0 mx-2 h-16 border-neon-b border-neon-orange select-none z-50">
@@ -40,7 +40,7 @@ const Header = () => {
               NEO M<span className="text-neon-orange">e</span>TRO CITY
             </p>
             <p className="ml-1 text-shadow-none opacity-80 text-sm font-mono bg-cyber-dark px-2 py-1 rounded-lg">
-              v1.0.0
+              v0.1.0
             </p>
           </Link>
         </div>

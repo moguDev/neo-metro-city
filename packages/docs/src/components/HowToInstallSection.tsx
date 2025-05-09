@@ -18,6 +18,7 @@ import {
   VueIcon,
   YarnIcon,
 } from "./svg-icons/icons";
+import { useAlert } from "./AlertProvider";
 
 const FRAMEWORKS = [
   { icon: <ViteIcon size={20} />, name: "Vite", id: "vite" },
@@ -30,6 +31,7 @@ const FRAMEWORKS = [
 
 const HowToInstallSection = () => {
   const [selectedTab, setSelectedTab] = useState<string>("npm");
+  const { show } = useAlert();
   const instllationCmd = () => {
     switch (selectedTab) {
       case "npm":
@@ -191,6 +193,7 @@ const HowToInstallSection = () => {
             <div
               key={index}
               className="bg-cyber-black hover:bg-cyber-dark rounded-md border-2 border-gray-800 hover:border-neon hover:border-neon-orange hover:-translate-y-1 flex flex-col items-center justify-center p-4 cursor-pointer min-h-32 transition-all duration-500"
+              onClick={() => show("This feature is still under development.")}
             >
               {framework.icon}
               <p className="text-sm font-bold tracking-widest mt-4">

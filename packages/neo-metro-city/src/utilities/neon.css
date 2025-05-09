@@ -57,10 +57,12 @@
   text-shadow: none !important;
 }
 
-.text-neon-blue {
+.text-neon-blue,
+.text-primary {
   --neon-text-color: var(--neon-blue);
 }
-.text-neon-orange {
+.text-neon-orange,
+.text-accent {
   --neon-text-color: var(--neon-orange);
 }
 .text-neon-red {

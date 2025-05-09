@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 
 const TypingText = () => {
-  const fullText =
-    "Thhe most geeky UI Components & Effects Library for Tailwind CSS.";
+  const fullText = "Thhe most cyber-geek UI library for Tailwind CSS.";
   const [displayedText, setDisplayedText] = useState("");
   const [isFinished, setIsFinished] = useState(false);
 
@@ -22,7 +21,7 @@ const TypingText = () => {
   }, []);
 
   return (
-    <p className="md:text-xl text-[10px] font-medium text-neon-green my-4 tracking-widest border-neon-t border-neon-b md:w-2xl w-80 text-center md:p-4 p-3">
+    <p className="md:text-xl text-[10px] font-medium my-4 tracking-widest border-neon-t border-neon-b md:w-2xl w-80 text-center md:p-4 p-3">
       {displayedText.includes("Tailwind CSS.") ? (
         <>
           {displayedText.split("Tailwind CSS.")[0]}
