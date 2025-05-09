@@ -20,9 +20,9 @@ const loadingPreviewData: ComponentPreviewData = {
       ),
       jsxStr: dedent(
         `<div className="loading">
-          <span className="dot"></span>
-          <span className="dot"></span>
-          <span className="dot"></span>
+          <span className="dot"/>
+          <span className="dot"/>
+          <span className="dot"/>
         </div>`
       ),
     },
