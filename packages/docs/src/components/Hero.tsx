@@ -22,7 +22,7 @@ const TypingText = () => {
   }, []);
 
   return (
-    <p className="md:text-xl text-[10px] font-medium text-neon-green my-4 tracking-widest border-neon-t border-neon-b md:w-2xl w-80 text-center md:p-4 p-3">
+    <p className="md:text-xl text-[10px] font-medium my-4 tracking-widest border-neon-t border-neon-b md:w-2xl w-80 text-center md:p-4 p-3">
       {displayedText.includes("Tailwind CSS.") ? (
         <>
           {displayedText.split("Tailwind CSS.")[0]}
