@@ -2,27 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import BackgroundShowcase from "@/components/BackgroundShowcase";
-import SideMenu from "@/components/SideMenu";
+import SideDrawer from "@/components/SideDrawer";
 import { AlertProvider } from "@/components/AlertProvider";
 
 export const metadata: Metadata = {
   title:
-    "NEO MeTRO CITY: The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.",
+    "Neo Metro City: The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.",
   description:
     "The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.This is more than just a library — it's a place where geeks connect, create, and sync with the city.",
   openGraph: {
     title:
-      "NEO MeTRO CITY: The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.",
+      "Neo Metro City: The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.",
     description:
       "The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.This is more than just a library — it's a place where geeks connect, create, and sync with the city.",
     url: "https://neo-metro.dev",
-    siteName: "NEO MeTRO CITY",
+    siteName: "Neo Metro City",
     images: [
       {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "NEO MeTRO CITY",
+        alt: "Neo Metro City",
       },
     ],
     locale: "ja_JP",
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "NEO MeTRO CITY: The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.",
+      "Neo Metro City: The most cyber-geek UI library for Tailwind CSS — open-source, ever-evolving, and built by the geeks of Neo Metro City.",
     images: [
       {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "NEO MeTRO CITY",
+        alt: "Neo Metro City",
       },
     ],
     creator: "@mogu_57B",
@@ -66,7 +66,7 @@ export default function RootLayout({
         <AlertProvider>
           <div className="relative">{children}</div>
         </AlertProvider>
-        <SideMenu />
+        <SideDrawer />
       </body>
     </html>
   );

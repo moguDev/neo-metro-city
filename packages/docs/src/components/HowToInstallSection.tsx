@@ -19,6 +19,7 @@ import {
   YarnIcon,
 } from "./svg-icons/icons";
 import { useAlert } from "./AlertProvider";
+import CodeBlock from "./CodeBlock";
 
 const FRAMEWORKS = [
   { icon: <ViteIcon size={20} />, name: "Vite", id: "vite" },
@@ -43,16 +44,6 @@ const HowToInstallSection = () => {
       default:
         return "npm i neo-metro-city@latest";
     }
-  };
-  const handleClickCopy = () => {
-    navigator.clipboard
-      .writeText(instllationCmd())
-      .then(() => {
-        console.log("Success: Copy to clicpboard");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
   };
   const stepTextCls = clsx("italic", "tracking-wider");
   return (
@@ -89,7 +80,7 @@ const HowToInstallSection = () => {
           <p className={stepTextCls}>
             1. Install{" "}
             <span className="font-semibold text-neon-orange underline tracking-wider blink">
-              NEO MeTRO CITY
+              Neo Metro City
             </span>{" "}
             as a Node package
           </p>
@@ -128,18 +119,7 @@ const HowToInstallSection = () => {
               <span className="ml-1">yarn</span>
             </label>
           </div>
-          <div className="flex items-center justify-betreen bg-cyber-dark border border-gray-800 font-mono rounded-lg md:text-base text-sm text-neon-none">
-            <SyntaxHighlighter
-              language="shell"
-              style={atomDark}
-              customStyle={{ backgroundColor: "transparent", width: "100%" }}
-            >
-              {instllationCmd()}
-            </SyntaxHighlighter>
-            <button className="btn" onClick={handleClickCopy}>
-              <ClipboardIcon size={6} />
-            </button>
-          </div>
+          <CodeBlock fileName="Terminal" code={instllationCmd()} lang="shell" />
         </div>
         {/* Step 2 */}
         <div>
