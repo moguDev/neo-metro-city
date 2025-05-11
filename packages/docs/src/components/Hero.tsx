@@ -48,10 +48,7 @@ const Hero = () => {
         <img src={"https://img.shields.io/npm/v/neo-metro-city?color=blue"} />
         <img src={"https://img.shields.io/npm/l/neo-metro-city.svg"} />
         <img src={"https://img.shields.io/npm/dt/neo-metro-city?color-red"} />
-        <img
-          src="https://img.shields.io/badge/contributions-welcome-orange.svg"
-          alt="Contributions welcome"
-        />
+        <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" />
       </div>
       <div className="flex md:flex-row flex-col items-center mx-auto gap-8">
         <a
