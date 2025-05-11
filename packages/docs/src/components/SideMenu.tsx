@@ -2,18 +2,10 @@ import { componentsPreviewDatas } from "@/ui-previews";
 import { ChevronRightIcon } from "./svg-icons/icons";
 import clsx from "clsx";
 
-const SideMenuItem = ({
-  key,
-  href,
-  label,
-}: {
-  key?: any;
-  href: string;
-  label: string;
-}) => {
+const SideMenuItem = ({ href, label }: { href: string; label: string }) => {
   const liClasses = clsx("group", "px-1", "py-2", "tracking-wider", "text-sm");
   return (
-    <li key={key ?? ""} className={liClasses}>
+    <li className={liClasses}>
       <a
         href={href}
         className="flex items-center justify-between hover:text-neon-orange hover:brightness-150 transition-all cursor-pointer"

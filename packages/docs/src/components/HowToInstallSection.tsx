@@ -45,16 +45,6 @@ const HowToInstallSection = () => {
         return "npm i neo-metro-city@latest";
     }
   };
-  const handleClickCopy = () => {
-    navigator.clipboard
-      .writeText(instllationCmd())
-      .then(() => {
-        console.log("Success: Copy to clicpboard");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
   const stepTextCls = clsx("italic", "tracking-wider");
   return (
     <section className="py-4 md:text-base text-sm" id="how-to-install">
