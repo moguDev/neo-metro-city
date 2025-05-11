@@ -21,7 +21,7 @@ const TypingText = () => {
   }, []);
 
   return (
-    <p className="md:text-xl text-[10px] font-medium my-4 tracking-widest border-neon-t border-neon-b md:w-2xl w-80 text-center md:p-4 p-3">
+    <p className="md:text-xl text-[10px] font-medium md:my-4 my-2 tracking-widest md:w-2xl w-80 text-center md:p-4 p-2">
       {displayedText.includes("Tailwind CSS.") ? (
         <>
           {displayedText.split("Tailwind CSS.")[0]}
@@ -44,7 +44,7 @@ const Hero = () => {
         NEO M<span className="blink text-neon-orange">e</span>TRO CITY
       </h1>
       <TypingText />
-      <div className="flex items-center justify-center flex-wrap gap-4 p-4 my-4">
+      <div className="flex items-center justify-center flex-wrap gap-4 p-4 my-2">
         <img src={"https://img.shields.io/npm/v/neo-metro-city?color=blue"} />
         <img src={"https://img.shields.io/npm/l/neo-metro-city.svg"} />
         <img src={"https://img.shields.io/npm/dt/neo-metro-city?color-red"} />
@@ -60,9 +60,9 @@ const Hero = () => {
         >
           Sync into the city
         </a>
-        <p className="bg-cyber-dark px-4 py-2 tracking-widest rounded-lg select-text font-mono text-neon-none md:text-base text-sm">
+        <p className="bg-cyber-dark px-4 py-2 tracking-wide select-text font-mono text-neon-none md:text-base text-sm rounded-lg border border-gray-800">
           <span className="select-none mr-4 text-neon-yellow text-shadow-none">
-            {">_"}
+            $
           </span>
           npm i neo-metro-city@latest
         </p>
