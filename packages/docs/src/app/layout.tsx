@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import BackgroundShowcase from "@/components/BackgroundShowcase";
-import SideMenu from "@/components/SideMenu";
+import SideDrawer from "@/components/SideDrawer";
 import { AlertProvider } from "@/components/AlertProvider";
 
 export const metadata: Metadata = {
@@ -66,7 +66,7 @@ export default function RootLayout({
         <AlertProvider>
           <div className="relative">{children}</div>
         </AlertProvider>
-        <SideMenu />
+        <SideDrawer />
       </body>
     </html>
   );
