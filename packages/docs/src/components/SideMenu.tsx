@@ -11,7 +11,7 @@ const SideMenuItem = ({
   href: string;
   label: string;
 }) => {
-  const liClasses = clsx("group", "px-1", "py-2", "tracking-wider");
+  const liClasses = clsx("group", "px-1", "py-2", "tracking-wider", "text-sm");
   return (
     <li key={key ?? ""} className={liClasses}>
       <a
@@ -30,14 +30,13 @@ const SideMenuItem = ({
 const SideMenu = ({ className = "" }: { className?: string | undefined }) => {
   return (
     <ul className={className}>
-      <li>
+      <li className="pb-4">
         <ul className="uppercase">
           <h2 className="text-lg text-neon-orange font-bold italic uppercase">
             Docs
           </h2>
-          <SideMenuItem href="#" label="Introduction" />
-          <SideMenuItem href="#" label="Install" />
-          <SideMenuItem href="#" label="Use" />
+          <SideMenuItem href="/docs/introduction" label="Introduction" />
+          <SideMenuItem href="/docs/install" label="Install" />
         </ul>
       </li>
       <li>
