@@ -29,6 +29,7 @@ const SideMenu = ({ className = "" }: { className?: string | undefined }) => {
           </h2>
           <SideMenuItem href="/docs/introduction" label="Introduction" />
           <SideMenuItem href="/docs/install" label="Install" />
+          <SideMenuItem href="/docs/typography" label="Typography" />
         </ul>
       </li>
       <li>
