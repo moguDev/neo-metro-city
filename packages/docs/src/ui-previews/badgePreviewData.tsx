@@ -13,6 +13,34 @@ const badgePreviewData: ComponentPreviewData = {
       jsxStr: dedent(`<span className="badge">BADGE</span>`),
     },
     {
+      title: "Badge sizes",
+      component: (
+        <div className="flex flex-wrap gap-4 justify-center items-center">
+          <span className="badge text-xs">Xsmall</span>
+          <span className="badge text-sm">Small</span>
+          <span className="badge text-base">Medium</span>
+          <span className="badge text-lg">Large</span>
+          <span className="badge text-xl">XLarge</span>
+        </div>
+      ),
+      htmlStr: dedent(`
+        <div className="flex flex-wrap gap-4 justify-center items-center">
+          <span className="badge text-xs">Xsmall</span>
+          <span className="badge text-sm">Small</span>
+          <span className="badge text-base">Medium</span>
+          <span className="badge text-lg">Large</span>
+          <span className="badge text-xl">XLarge</span>
+        </div>`),
+      jsxStr: dedent(`
+        <div className="flex flex-wrap gap-4 justify-center items-center">
+          <span className="badge text-xs">Xsmall</span>
+          <span className="badge text-sm">Small</span>
+          <span className="badge text-base">Medium</span>
+          <span className="badge text-lg">Large</span>
+          <span className="badge text-xl">XLarge</span>
+        </div>`),
+    },
+    {
       title: "Badge colors",
       component: (
         <div className="flex flex-wrap gap-4">
