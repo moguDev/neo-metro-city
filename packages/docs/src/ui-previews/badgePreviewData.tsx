@@ -9,16 +9,8 @@ const badgePreviewData: ComponentPreviewData = {
     {
       title: "Badge",
       component: <span className="badge">BADGE</span>,
-      htmlStr: dedent(
-        `<textarea class="textarea" placeholder="Enter your encrypted message..."></textarea>`
-      ),
-      jsxStr: dedent(
-        `<div className="loading">
-          <span className="dot"></span>
-          <span className="dot"></span>
-          <span className="dot"></span>
-        </div>`
-      ),
+      htmlStr: dedent(`<span className="badge">BADGE</span>`),
+      jsxStr: dedent(`<span className="badge">BADGE</span>`),
     },
   ],
 };
