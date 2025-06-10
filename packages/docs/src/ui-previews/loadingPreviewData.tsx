@@ -16,7 +16,11 @@ const loadingPreviewData: ComponentPreviewData = {
         </div>
       ),
       htmlStr: dedent(
-        `<textarea class="textarea" placeholder="Enter your encrypted message..."></textarea>`
+        `<div class="loading">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>`
       ),
       jsxStr: dedent(
         `<div className="loading">
